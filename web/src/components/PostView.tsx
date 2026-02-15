@@ -242,7 +242,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                     Share
                   </button>
                 </div>
-                <a className="cardOriginal" href={p.url} target="_blank" rel="noopener noreferrer">Original ↗</a>
+                {/* removed original link */}
                 <div className="meta">
                   <span className="metaDate"><span className="mobileOnly">{shortDate(p.date)}</span><span className="desktopOnly">{p.date}</span></span>
                   {/* removed post type */}
