@@ -122,7 +122,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
   return (
     <>
       <aside className="sideMeta" aria-hidden>
-        <div className="sideBrand">THE WHATEVER</div>
+        <a className="sideBrand" href="/">THE WHATEVER</a>
         <div className="sideTop">Your First Stop to a Shameful Browser History</div>
         <img className="sidePhoto" src="/sidebar-queen.jpg" alt="" />
         <div className="sideBottom">A collection of posts from April 21, 2009 to November 18, 2015.</div>
@@ -133,7 +133,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
         {/* moved post label to card header */}
       </aside>
       <div className="mobileIntro" aria-hidden>
-        <div className="mobileBrand">THE WHATEVER</div>
+        <a className="mobileBrand" href="/">THE WHATEVER</a>
         <div className="mobileTop">Your First Stop to a Shameful Browser History</div>
         <div className="mobileBottom">A collection of posts from 04/21/09 to 11/18/15.</div>
       </div>
