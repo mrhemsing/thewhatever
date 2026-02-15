@@ -87,6 +87,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   .mainBlock{display:flex;flex-direction:column;justify-content:flex-start}
   .sideMeta{display:none}
   .mobileIntro{display:block;margin:0 0 8px}
+  .metaType{display:none}
   .scrollHint{display:flex;align-items:center;justify-content:center;gap:6px;position:static;margin:-2px 0 20px;writing-mode:horizontal-tb;text-orientation:mixed;font-size:11px;letter-spacing:.08em;color:#b6beca;background:rgba(2,6,23,.72);border:1px solid rgba(148,163,184,.28);padding:6px 10px;border-radius:999px;z-index:1;animation:mobileSwipeHint 4.2s ease-in-out 1 forwards;pointer-events:none}
   .scroller{height:auto;flex:1 1 auto;min-height:0}
   .card{grid-template-rows:auto auto auto}

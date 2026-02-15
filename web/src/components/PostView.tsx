@@ -143,7 +143,11 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
             <article className="card">
               <header className="cardHead">
                 <span className="cardPostLabel"><span className="sideCountWord">Post</span> <span className="sideCountNum">{Math.min(totalPosts, pageOffset + activeIdx + 1)}/{totalPosts}</span></span>
-                <div className="meta">{p.date} · {p.type || 'post'}{p['note-count'] ? ` · ${p['note-count']} notes` : ''}</div>
+                <div className="meta">
+                  <span>{p.date}</span>
+                  <span className="metaType"> · {p.type || 'post'}</span>
+                  {p['note-count'] ? <span>{` · ${p['note-count']} notes`}</span> : null}
+                </div>
               </header>
               <a href={p.url} target="_blank" rel="noopener noreferrer" className="mediaLink">
                 <div suppressHydrationWarning className="media" dangerouslySetInnerHTML={{ __html: mediaHtmlFor(p) }} />
