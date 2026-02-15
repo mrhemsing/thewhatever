@@ -193,14 +193,14 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
           <section key={p.id} className="slide" ref={(el) => { slidesRef.current[i] = el; }}>
             <article className="card">
               <header className="cardHead">
-                <span className="cardPostLabel"><span className="sideCountWord">Post</span> <span className="sideCountNum">{Math.min(totalPosts, pageOffset + activeIdx + 1)}/{totalPosts}</span></span>
+                <a className="cardPostLabel" href={`/post/${p.id}`}><span className="sideCountWord">Post</span> <span className="sideCountNum">{Math.min(totalPosts, pageOffset + activeIdx + 1)}/{totalPosts}</span></a>
                 <div className="meta">
                   <span>{p.date}</span>
                   {/* removed post type */}
                   {p['note-count'] ? <span>{` · ${p['note-count']} notes`}</span> : null}
                 </div>
               </header>
-              <a href={p.url} target="_blank" rel="noopener noreferrer" className="mediaLink">
+              <a href={`/post/${p.id}`} className="mediaLink">
                 <div suppressHydrationWarning className="media" dangerouslySetInnerHTML={{ __html: mediaHtmlFor(p) }} />
               </a>
               <div suppressHydrationWarning className="caption" dangerouslySetInnerHTML={{ __html: captionHtmlFor(p) }} />
