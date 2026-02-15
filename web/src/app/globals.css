@@ -59,10 +59,10 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .mobileBrand{color:#fff;font-size:28px;line-height:1.02;font-weight:700;letter-spacing:.01em}
 .mobileTop{margin-top:8px;color:#cbd5e1;font-size:15px;line-height:1.25;font-weight:600}
 .mobileBottom{margin-top:10px;color:#cbd5e1;font-size:12px;line-height:1.35}
-.scrollHint{position:absolute;right:-42px;top:46%;transform:translateY(calc(-50% - 100px));writing-mode:vertical-rl;text-orientation:mixed;font-size:11px;letter-spacing:.12em;color:#b6beca;pointer-events:none;user-select:none;animation:hintFlash 1s ease-in-out 0s 1}
+.scrollHint{display:none}
 .hintArrow{display:inline-block}
 @keyframes hintFlash{0%,100%{opacity:1}50%{opacity:.78}}
-@keyframes mobileSwipeHint{0%{opacity:0;transform:translateX(-50%) translateY(8px)}18%{opacity:1;transform:translateX(-50%) translateY(0)}38%{transform:translateX(-50%) translateY(-6px)}58%{transform:translateX(-50%) translateY(6px)}78%{transform:translateX(-50%) translateY(-4px)}100%{opacity:0;transform:translateX(-50%) translateY(0)}}
+@keyframes mobileSwipeHint{0%{opacity:0;transform:translateY(8px)}18%{opacity:1;transform:translateY(0)}38%{transform:translateY(-6px)}58%{transform:translateY(6px)}78%{transform:translateY(-4px)}100%{opacity:0;transform:translateY(0)}}
 
 .galleryWrap{max-width:1100px;margin:0 auto}
 .monthBlock{margin:22px 0}
@@ -87,7 +87,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   .mainBlock{display:flex;flex-direction:column;justify-content:flex-start}
   .sideMeta{display:none}
   .mobileIntro{display:block;margin:0 0 8px}
-  .scrollHint{display:block;position:fixed;left:50%;right:auto;top:auto;bottom:calc(72px + env(safe-area-inset-bottom));transform:translateX(-50%);writing-mode:horizontal-tb;text-orientation:mixed;font-size:11px;letter-spacing:.08em;color:#b6beca;background:rgba(2,6,23,.72);border:1px solid rgba(148,163,184,.28);padding:6px 10px;border-radius:999px;z-index:40;animation:mobileSwipeHint 2.2s ease-in-out 1 forwards;pointer-events:none}
+  .scrollHint{display:flex;align-items:center;justify-content:center;gap:6px;position:static;margin:6px 0 8px;writing-mode:horizontal-tb;text-orientation:mixed;font-size:11px;letter-spacing:.08em;color:#b6beca;background:rgba(2,6,23,.72);border:1px solid rgba(148,163,184,.28);padding:6px 10px;border-radius:999px;z-index:1;animation:mobileSwipeHint 2.2s ease-in-out 1 forwards;pointer-events:none}
   .scroller{height:auto;flex:1 1 auto;min-height:0}
   .card{grid-template-rows:auto auto auto}
   .media{width:100%;max-width:500px;aspect-ratio:4/3;height:auto}

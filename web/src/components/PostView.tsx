@@ -132,7 +132,11 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
         </div>
         {/* moved post label to card header */}
       </aside>
-      <div className="scrollHint" aria-hidden><span className="hintArrow">‹</span> SCROLL <span className="hintArrow">›</span></div>
+      <div className="mobileIntro" aria-hidden>
+        <div className="mobileBrand">THE WHATEVER</div>
+        <div className="mobileTop">Your First Stop to a Shameful Browser History</div>
+        <div className="mobileBottom">A collection of posts from April 21, 2009 to November 18, 2015.</div>
+      </div>
       <div className="scroller" ref={scrollerRef}>
         {visiblePosts.map((p, i) => (
           <section key={p.id} className="slide" ref={(el) => { slidesRef.current[i] = el; }}>
@@ -149,6 +153,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
           </section>
         ))}
       </div>
+      <div className="scrollHint" aria-hidden><span className="hintArrow">↑</span> SWIPE UP / DOWN <span className="hintArrow">↓</span></div>
       <div className="jumpWrap">
         <div className="jumpRow" ref={jumpRowRef}>
           {thumbs.map((t, i) => (
