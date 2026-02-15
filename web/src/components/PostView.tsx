@@ -269,7 +269,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                 </div>
                 {/* removed original link */}
                 <div className="meta">
-                  <span className="metaDate"><span className="mobileOnly">{shortDate(p.date)}</span><span className="desktopOnly">{p.date}</span></span>
+                  <span className="metaDate">{p.date}</span>
                   {/* removed post type */}
                   {p['note-count'] ? <span>{` · ${p['note-count']} notes`}</span> : null}
                 </div>
