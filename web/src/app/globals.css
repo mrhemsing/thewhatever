@@ -39,14 +39,14 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .caption blockquote a{color:#cbd5e1}
 .jumpWrap{margin:40px 0 0}
 .postCounter{font-size:12px;color:#94a3b8;text-align:center;margin:6px 0 6px}
-.jumpRow{display:grid;grid-auto-flow:column;grid-auto-columns:64px;gap:8px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin;scrollbar-color:rgba(148,163,184,.65) rgba(15,23,42,.55)}
+.jumpRow{display:grid;grid-auto-flow:column;grid-auto-columns:64px;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:12px;scrollbar-width:thin;scrollbar-color:rgba(148,163,184,.65) rgba(15,23,42,.55)}
 .jumpRow::-webkit-scrollbar{height:8px}
 .jumpRow::-webkit-scrollbar-track{background:rgba(15,23,42,.55);border-radius:999px}
 .jumpRow::-webkit-scrollbar-thumb{background:rgba(148,163,184,.65);border-radius:999px}
 .thumbBtn{position:relative;border:1px solid rgba(148,163,184,.28);border-radius:12px;padding:0;background:#0f172a;cursor:pointer;overflow:hidden;height:64px;transition:border-color .15s ease, box-shadow .15s ease}
 .thumbBtn.active{border-color:rgba(96,165,250,.95);box-shadow:0 0 0 2px rgba(96,165,250,.35) inset}
 .thumbBtn img{width:100%;height:100%;object-fit:cover}
-.pager{margin:6px 0 0;display:flex;justify-content:center;align-items:center;position:static;bottom:auto;padding:10px 0 0;background:none;pointer-events:none}
+.pager{margin:14px 0 0;display:flex;justify-content:center;align-items:center;position:static;bottom:auto;padding:10px 0 0;background:none;pointer-events:none}
 .pagerInner{display:flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid rgba(148,163,184,.22);border-radius:999px;background:rgba(15,23,42,.55);backdrop-filter:blur(6px);pointer-events:auto}
 .pagerArrow{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:999px;color:#cbd5e1;text-decoration:none;font-size:16px;line-height:1;font-weight:800;background:rgba(30,41,59,.55);border:1px solid rgba(148,163,184,.24)}
 .pagerArrow.disabled{opacity:.35;pointer-events:none}
@@ -113,6 +113,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   .media{width:100%;max-width:500px;aspect-ratio:4/3;height:auto}
   .caption{min-height:56px;max-height:120px;overflow-y:auto;scrollbar-gutter:stable}
   .jumpWrap{margin:0;padding-bottom:0;top:0}
+  .jumpRow{margin-bottom:0}
   .pager{position:static;bottom:auto;margin:2px 0 0;padding:4px 0 calc(4px + env(safe-area-inset-bottom));background:none}
 }
 
