@@ -1,0 +1,81 @@
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#000;color:#e5e7eb;margin:0;padding:24px;height:100vh;overflow:hidden}
+.wrap{max-width:920px;margin:0 auto;height:100%;display:flex;flex-direction:column}
+.mainBlock{max-width:520px;width:100%;margin:0 auto;height:100%;display:flex;flex-direction:column;justify-content:flex-start;position:relative;min-height:0}
+.intro{margin:0}
+.sub{color:#9ca3af;margin-bottom:8px}
+.modeNav{display:flex;gap:8px;margin:0 0 10px}
+.modeNav a{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;border:1px solid rgba(148,163,184,.28);background:rgba(15,23,42,.45);color:#cbd5e1;text-decoration:none;font-size:13px}
+.modeNav a.active{background:linear-gradient(180deg,rgba(59,130,246,.28),rgba(30,64,175,.22));border-color:rgba(96,165,250,.65);color:#e2e8f0}
+.scroller{height:clamp(260px,68vh,780px);overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+.slide{height:100%;min-height:100%;overflow:visible;scroll-snap-align:start;display:flex;align-items:center;justify-content:center}
+.card{background:#000;border:none;border-radius:0 0 16px 16px;padding:18px 16px 20px;max-width:520px;width:100%;box-shadow:0 14px 34px rgba(2,6,23,.45);display:grid;grid-template-rows:auto 375px 72px;row-gap:8px}
+.cardHead{display:flex;justify-content:space-between;gap:8px;flex-wrap:nowrap;align-items:center;min-height:18px;margin-bottom:8px}
+.meta{color:#a7b4c8;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cardHead a{color:#a7b4c8;font-size:12px;text-decoration:none;white-space:nowrap;flex:0 0 auto}
+.cardPostLabel{display:inline-block;padding:4px 10px;border:1px solid #3f3f46;border-radius:4px;background:#2d4157;font-size:11px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+.mediaLink{display:block;text-decoration:none}
+.media{display:flex;justify-content:center;width:100%;max-width:500px;height:375px;margin:0 auto;background:#000;border-radius:10px;overflow:hidden}
+.media img{display:block;width:100%;height:100%;object-fit:fill;margin:0 auto;border-radius:10px}
+.media video{display:block;width:100%;height:100%;object-fit:contain;margin:0 auto;border-radius:10px}
+.caption{line-height:1.5;text-align:left;margin-top:8px;display:block;min-height:72px;max-height:72px;overflow-y:auto}
+.caption > *{display:none}
+.caption blockquote{display:block;margin:0 0 0 15px;padding-left:12px;border-left:3px solid rgba(148,163,184,.6)}
+.caption blockquote p{margin:0}
+.caption blockquote a{color:#cbd5e1}
+.jumpWrap{margin:0 0 10px}
+.postCounter{font-size:12px;color:#94a3b8;text-align:center;margin:6px 0 6px}
+.jumpRow{display:grid;grid-auto-flow:column;grid-auto-columns:64px;gap:8px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin;scrollbar-color:rgba(148,163,184,.65) rgba(15,23,42,.55)}
+.jumpRow::-webkit-scrollbar{height:8px}
+.jumpRow::-webkit-scrollbar-track{background:rgba(15,23,42,.55);border-radius:999px}
+.jumpRow::-webkit-scrollbar-thumb{background:rgba(148,163,184,.65);border-radius:999px}
+.thumbBtn{position:relative;border:1px solid rgba(148,163,184,.28);border-radius:12px;padding:0;background:#0f172a;cursor:pointer;overflow:hidden;height:64px;transition:border-color .15s ease, box-shadow .15s ease}
+.thumbBtn.active{border-color:rgba(96,165,250,.95);box-shadow:0 0 0 2px rgba(96,165,250,.35) inset}
+.thumbBtn img{width:100%;height:100%;object-fit:cover}
+.pager{margin:10px 0 0;display:flex;justify-content:center;gap:14px;align-items:center;position:sticky;bottom:0;padding:16px 0 12px;background:linear-gradient(180deg,rgba(7,11,19,0),rgba(7,11,19,.92) 35%)}
+.pager a{color:#93c5fd;text-decoration:none}
+.sideMeta{position:absolute;left:-265px;top:0;width:235px;background:#000;border:none;display:flex;flex-direction:column}
+.sideBrand{padding:8px 16px 2px;color:#fff;font-size:34px;line-height:1.02;font-weight:700;letter-spacing:.01em}
+.sideTop,.sideBottom{padding:12px 16px;color:#cbd5e1;font-size:13px;line-height:1.35}
+.sideTop{font-size:16px;line-height:1.2;font-weight:600;letter-spacing:.01em}
+.sideBottom{padding-top:22px;padding-bottom:24px}
+.sidePhoto{width:100%;height:auto;display:block;margin-top:12px}
+.sideSeen{margin-top:auto;padding:0 16px 0}
+.sideSeenLabel{font-size:10px;letter-spacing:.12em;color:#9ca3af;margin-bottom:6px}
+.sideTumblr{height:60px;width:auto;display:block;opacity:.9;margin-top:8px}
+.sideCount{padding:0 16px 14px;color:#94a3b8;font-size:12px;text-align:right;align-self:flex-end;width:100%;margin-top:-4px}
+.sideCountLabel{display:inline-block;padding:4px 10px;border:1px solid #3f3f46;border-radius:4px;background:#2d4157;font-size:11px;letter-spacing:.03em;text-transform:uppercase}
+.sideCountWord{color:#9ca3af}
+.sideCountNum{color:#ffffff}
+.scrollHint{position:absolute;right:-42px;top:46%;transform:translateY(calc(-50% - 100px));writing-mode:vertical-rl;text-orientation:mixed;font-size:11px;letter-spacing:.12em;color:#b6beca;pointer-events:none;user-select:none;animation:hintFlash 1s ease-in-out 0s 1}
+.hintArrow{display:inline-block}
+@keyframes hintFlash{0%,100%{opacity:1}50%{opacity:.78}}
+
+.galleryWrap{max-width:1100px;margin:0 auto}
+.monthBlock{margin:22px 0}
+.monthBlock h2{margin:0 0 10px;font-size:18px;color:#d1d5db}
+.thumbGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.tile{display:block;border:1px solid #1f2937;border-radius:10px;overflow:hidden;background:#111827;aspect-ratio:1/1}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+
+@media (min-height: 900px){
+  .mainBlock{justify-content:flex-start}
+}
+
+@media (max-width: 1200px){
+  .sideMeta{display:none}
+}
+
+@media (max-height: 820px){
+  .intro h1{font-size:26px;margin-bottom:5px}
+  .intro h2{font-size:17px;margin-bottom:8px}
+  .sub{margin-bottom:7px}
+  .slide{align-items:flex-start}
+  .scroller{height:70vh}
+  .card{padding:11px 10px 12px;grid-template-rows:auto 320px 80px}
+  .media{height:320px}
+  .caption{min-height:80px;max-height:80px}
+  .postCounter{margin:5px 0}
+  .jumpWrap{margin:0 0 8px}
+  .pager{padding:10px 0 8px}
+}

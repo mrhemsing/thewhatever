@@ -1,0 +1,2247 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Whatever Archive · Page 15</title>
+  <style>
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 600px at 10% -10%,rgba(96,165,250,0.16),transparent 55%),radial-gradient(1000px 500px at 95% 110%,rgba(168,85,247,0.12),transparent 60%),linear-gradient(180deg,#070b13,#0b1220);color:#e5e7eb;margin:0;padding:24px;height:100vh;overflow:hidden}
+    .wrap{max-width:920px;margin:0 auto;height:100%;display:flex;flex-direction:column}
+    .mainBlock{max-width:520px;width:100%;margin:0 auto;height:100%;display:flex;flex-direction:column;justify-content:center}
+    h1{margin:0 0 8px;font-size:28px}
+    .sub{color:#9ca3af;margin-bottom:20px}
+    .topBlock{margin:0 0 25px}
+    .intro{margin:0}
+    .intro h1{margin:0 0 8px;font-size:28px}
+    .intro .sub{color:#9ca3af;margin-bottom:8px}
+    .modeNav{display:flex;gap:8px;margin:0 0 10px}
+    .modeNav a{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;border:1px solid rgba(148,163,184,0.28);background:rgba(15,23,42,0.45);backdrop-filter:blur(8px);color:#cbd5e1;text-decoration:none;font-size:13px;transition:all .18s ease}
+    .modeNav a:hover{border-color:rgba(147,197,253,0.55);color:#e2e8f0;transform:translateY(-1px)}
+    .modeNav a.active{background:linear-gradient(180deg,rgba(59,130,246,0.28),rgba(30,64,175,0.22));border-color:rgba(96,165,250,0.65);color:#e2e8f0}
+    .jumpWrap{margin:0 0 10px}
+    .jumpWrap label{display:block;font-size:12px;color:#94a3b8;margin-top:10px;margin-bottom:10px}
+    .jumpThumbRow{display:grid;grid-auto-flow:column;grid-auto-columns:64px;gap:8px;overflow-x:auto;margin-top:16px;padding-bottom:4px;scrollbar-width:thin;scrollbar-color:rgba(148,163,184,0.65) rgba(15,23,42,0.55)}
+    .jumpThumbRow::-webkit-scrollbar{height:8px}
+    .jumpThumbRow::-webkit-scrollbar-track{background:rgba(15,23,42,0.55);border-radius:999px}
+    .jumpThumbRow::-webkit-scrollbar-thumb{background:rgba(148,163,184,0.65);border-radius:999px}
+    .jumpThumb{position:relative;appearance:none;border:1px solid rgba(148,163,184,0.28);border-radius:12px;padding:0;background:#0f172a;cursor:pointer;overflow:hidden;height:64px;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+    .jumpThumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .jumpThumb span{position:absolute;right:4px;bottom:4px;font-size:10px;line-height:1;padding:2px 4px;border-radius:999px;background:rgba(2,6,23,0.72);color:#e2e8f0}
+    .jumpThumbFallback{display:flex;align-items:center;justify-content:center;color:#94a3b8}
+    .jumpThumb:hover{transform:translateY(-1px);border-color:rgba(147,197,253,0.55);box-shadow:0 8px 20px rgba(2,6,23,0.45)}
+    .jumpThumb.active{outline:2px solid #60a5fa;outline-offset:0}
+    .navBottom{margin:10px 0 0;display:flex;justify-content:center;gap:14px;align-items:center}
+    .nav a{color:#93c5fd}
+    .postsScroller{height:min(70vh,760px);overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth;padding-right:4px;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior:contain}
+    .postsScroller::-webkit-scrollbar{display:none}
+    .slide{height:100%;min-height:100%;overflow:hidden;scroll-snap-align:start;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center}
+    .card{background:linear-gradient(180deg,rgba(15,23,42,0.88),rgba(15,23,42,0.74));border:1px solid rgba(148,163,184,0.22);backdrop-filter:blur(10px);border-radius:16px;padding:12px 10px 14px;margin:0 auto;max-width:520px;width:100%;display:flex;flex-direction:column;justify-content:flex-start;box-shadow:0 14px 34px rgba(2,6,23,0.45)}
+    .card header{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+    .meta{color:#a7b4c8;font-size:12px;letter-spacing:.02em}
+    .caption{line-height:1.5;text-align:left}
+    .caption img,.media img{display:block;width:100%;max-width:100%;height:auto;border-radius:10px;margin:0}
+    .media{margin-left:-2px;margin-right:-2px}
+    .media{text-align:center}
+    .media iframe{max-width:100%}
+    .tags{margin-top:10px;color:#9ca3af;font-size:13px}
+    .scrollHint{
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(288px, -50%);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      letter-spacing: 0.22em;
+      font-size: 11px;
+      color: rgba(229,231,235,0.62);
+      user-select: none;
+      pointer-events: none;
+      text-shadow: 0 0 10px rgba(0,0,0,0.45);
+    }
+    @media (max-width: 820px){
+      .scrollHint{display:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="scrollHint">‹ SCROLL ›</div>
+    <section class="mainBlock">
+      <section class="topBlock">
+        <nav class="modeNav" aria-label="Archive navigation">
+          <a class="active" href="./index.html">Post view</a>
+          <a href="./gallery.html">Gallery</a>
+        </nav>
+        <section class="intro">
+          <h1>The Whatever — Archive</h1>
+          <div class="sub">A collection of blog posts from April 21, 2009 to November 17, 2015.</div>
+          <div class="sub">Read-only archive. 3411 posts preserved from Tumblr. <a href="./gallery.html">Open gallery →</a></div>
+        </section>
+      </section>
+      <section class="postsScroller" id="postsScroller">
+        
+    <section class="slide">
+      <article class="card" id="p-1038266021">
+        <header>
+          <div class="meta">Mon, 30 Aug 2010 12:57:48 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1038266021" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7zce7YPft1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Well, imagine that.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1038265702">
+        <header>
+          <div class="meta">Mon, 30 Aug 2010 12:57:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1038265702" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7zchkVYJU1qzbs6po1_r2_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Ahh the universal language of sports, bringing people together.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1009408061">
+        <header>
+          <div class="meta">Wed, 25 Aug 2010 09:18:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1009408061" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7puap54gk1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Being British</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1009406086">
+        <header>
+          <div class="meta">Wed, 25 Aug 2010 09:17:40 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1009406086" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7puc3o4BS1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>The dream is over.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1009405895">
+        <header>
+          <div class="meta">Wed, 25 Aug 2010 09:17:37 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1009405895" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7h2ptN3LU1qaro0lo1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://gravyholocaust.tumblr.com/post/1006702416/icbmp-thesoundoffire-sophizm-livechucklelove-kellyb" target="_blank">gravyholocaust</a>:</p>
+<blockquote>
+<p>Here&rsquo;s Johnny!</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1009405382">
+        <header>
+          <div class="meta">Wed, 25 Aug 2010 09:17:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1009405382" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7pud9ZbAC1qzbs6po1_r3_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>bug porn</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1004691062">
+        <header>
+          <div class="meta">Tue, 24 Aug 2010 12:17:14 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1004691062" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7o7c8WDE21qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Sign of the times</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1004690795">
+        <header>
+          <div class="meta">Tue, 24 Aug 2010 12:17:10 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1004690795" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7o79vTYl31qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote><a target="_blank" href="http://www.sfgate.com/cgi-bin/blogs/green/detail?entry_id=70685&amp;tsp=1#ixzz0xTWOmCDk">60 mile traffic jam in China takes 3 days to navigate</a></blockquote>
+<blockquote>..and you thought your morning drive sucked.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1004690519">
+        <header>
+          <div class="meta">Tue, 24 Aug 2010 12:17:06 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1004690519" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7o7khCMSu1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>BUSTED!<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1004690168">
+        <header>
+          <div class="meta">Tue, 24 Aug 2010 12:17:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1004690168" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7o7h8BuH01qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>So the gates to Heaven aren&rsquo;t pearly after all&hellip;</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-1004689885">
+        <header>
+          <div class="meta">Tue, 24 Aug 2010 12:16:57 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/1004689885" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7o7j00cWf1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Coffee kills.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-981323205">
+        <header>
+          <div class="meta">Fri, 20 Aug 2010 00:02:46 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/981323205" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7cvygUBH71qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Come and get it.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-972613896">
+        <header>
+          <div class="meta">Wed, 18 Aug 2010 09:32:06 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/972613896" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7cvutVUJa1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>shit</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-972613401">
+        <header>
+          <div class="meta">Wed, 18 Aug 2010 09:31:54 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/972613401" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l7cw0fO4nc1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>The Great Cover Up</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-970943556">
+        <header>
+          <div class="meta">Tue, 17 Aug 2010 23:59:45 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/970943556" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l73n7atxcz1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>CHOMP</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-963296829">
+        <header>
+          <div class="meta">Mon, 16 Aug 2010 09:40:17 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/963296829" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l797acQZgG1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Monday.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-963292310">
+        <header>
+          <div class="meta">Mon, 16 Aug 2010 09:39:01 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/963292310" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l797boK2Cd1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>MATH. Not even once.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-947940742">
+        <header>
+          <div class="meta">Fri, 13 Aug 2010 09:41:10 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/947940742" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l73n5uVJ901qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>I want facebook to implement this.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-947942891">
+        <header>
+          <div class="meta">Fri, 13 Aug 2010 09:41:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/947942891" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l73ne1LoqA1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>(fade out) ice cream truck music</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-942931401">
+        <header>
+          <div class="meta">Thu, 12 Aug 2010 10:19:58 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/942931401" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6z693axJE1qz5njko1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://1nation.eu/post/935900866/you-are-being-monitored" target="_blank">peetypassion</a>:</p>
+<blockquote>
+<p>You Are Being Monitored</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-942926196">
+        <header>
+          <div class="meta">Thu, 12 Aug 2010 10:18:59 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/942926196" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l71ss8D5Y61qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Fresh Vaggies</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-942925921">
+        <header>
+          <div class="meta">Thu, 12 Aug 2010 10:18:44 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/942925921" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6xcvjr6V61qzgxpko1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://dogfromspace.tumblr.com/post/932416635/yeahiwasintheshit-via-moosiemoose" target="_blank">dogfromspace</a>:</p>
+<blockquote>
+<p>Um Really?</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-928438645">
+        <header>
+          <div class="meta">Mon, 09 Aug 2010 13:44:24 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/928438645" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6wka0is7s1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>HOLY F@%#$&amp;!!!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-928414627">
+        <header>
+          <div class="meta">Mon, 09 Aug 2010 13:34:06 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/928414627" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6whdeQSYc1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Great savings.<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-928413295">
+        <header>
+          <div class="meta">Mon, 09 Aug 2010 13:33:27 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/928413295" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6whl5LZVc1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Meanwhile in China..</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-903456348">
+        <header>
+          <div class="meta">Wed, 04 Aug 2010 09:33:24 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/903456348" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6bxf3YveO1qaobbko1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://seandan.tumblr.com/post/902901575/haha" target="_blank">seandan</a>:</p>
+<blockquote>
+<p>Got your back!</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-903456129">
+        <header>
+          <div class="meta">Wed, 04 Aug 2010 09:33:20 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/903456129" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6l5esqU531qa42jro1_400.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://www.terrysdiary.com/post/899326773/smells-like-teen-spirit" target="_blank">terrysdiary</a>:</p>
+<blockquote>
+<p>Smells like TEEN Spirit</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-903455972">
+        <header>
+          <div class="meta">Wed, 04 Aug 2010 09:33:17 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/903455972" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6l9z9j0Hr1qad74xo1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>In Dog Years I&rsquo;m Dead.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-898797619">
+        <header>
+          <div class="meta">Tue, 03 Aug 2010 10:32:58 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/898797619" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6jczxbUMd1qzp1zzo1_400.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://willzone.tumblr.com/post/894834343/unsee-unsee" target="_blank">willzone</a>:</p>
+<blockquote>
+<p>The woman has got sole.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-898797238">
+        <header>
+          <div class="meta">Tue, 03 Aug 2010 10:32:52 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/898797238" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6l688JsPX1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Veal with it.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-898796531">
+        <header>
+          <div class="meta">Tue, 03 Aug 2010 10:32:40 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/898796531" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5ue33bdoM1qcim6yo1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Finally.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-880447591">
+        <header>
+          <div class="meta">Fri, 30 Jul 2010 10:31:38 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/880447591" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6drzcxwQf1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>NNOOOOOO!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-880446557">
+        <header>
+          <div class="meta">Fri, 30 Jul 2010 10:31:18 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/880446557" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6dsgaxWzD1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>How memories are made.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-880446034">
+        <header>
+          <div class="meta">Fri, 30 Jul 2010 10:31:09 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/880446034" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6dlfbTuSN1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Wanted.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-880444716">
+        <header>
+          <div class="meta">Fri, 30 Jul 2010 10:30:19 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/880444716" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6byi2y8ye1qz9bwro1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://www.ifuckinghatebrent.com/post/876155619/theduty-great-moments-in-journalism" target="_blank">ifuckinghatebrent</a>:</p>
+<blockquote>
+<p>…great moments in journalism.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-875878379">
+        <header>
+          <div class="meta">Thu, 29 Jul 2010 10:30:03 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/875878379" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6bx15HZVC1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>never ever</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-875879076">
+        <header>
+          <div class="meta">Thu, 29 Jul 2010 10:30:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/875879076" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6bx2sHY0T1qzbs6po1_r2_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Buggin&rsquo; out!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-875878121">
+        <header>
+          <div class="meta">Thu, 29 Jul 2010 10:29:59 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/875878121" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l68bimUge71qz82ojo1_540.png" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://amilniazi.tumblr.com/post/867194414/thumbs-up-via-gabrieldelahaye" target="_blank">amilniazi</a>:</p>
+<blockquote>
+<p>Thumbs up?</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-875877867">
+        <header>
+          <div class="meta">Thu, 29 Jul 2010 10:29:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/875877867" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l6bwzeHa3x1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Swift Logic.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-862160379">
+        <header>
+          <div class="meta">Mon, 26 Jul 2010 11:01:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/862160379" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l66ey7ZiZ51qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Monday, time to get pumped.<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-862160085">
+        <header>
+          <div class="meta">Mon, 26 Jul 2010 11:00:49 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/862160085" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l64nchYaoi1qzx3m2o1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://sharpytoe.tumblr.com/post/857798188" target="_blank">sharpytoe</a>:</p>
+<blockquote>
+<p>Meanwhile…at Starbucks</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-862159197">
+        <header>
+          <div class="meta">Mon, 26 Jul 2010 11:00:43 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/862159197" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5iz9aCJNF1qc6qawo1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://crazywtf.tumblr.com/post/823348168/i-like-your-scarf" target="_blank">crazywtf</a>:</p>
+<blockquote>
+<p>I like your scarf…</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-862158959">
+        <header>
+          <div class="meta">Mon, 26 Jul 2010 11:00:38 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/862158959" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5za01DtZO1qanb21o1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Kids</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-845932520">
+        <header>
+          <div class="meta">Thu, 22 Jul 2010 11:00:48 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/845932520" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5z0hwzUc01qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Watermelon, I love you. (<a href="http://mini.glark.org/post/842929797/polar-bear-heart-watermelon" target="_blank">link</a>)</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-845932021">
+        <header>
+          <div class="meta">Thu, 22 Jul 2010 11:00:40 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/845932021" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5z0bbVLIn1qzbs6po1_r1_540.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>This kid will fear heights in the future.<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-845931801">
+        <header>
+          <div class="meta">Thu, 22 Jul 2010 11:00:36 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/845931801" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5z0g0OjMw1qzbs6po1_r1_400.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>I did this to you</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-841112118">
+        <header>
+          <div class="meta">Wed, 21 Jul 2010 09:00:16 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/841112118" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5x05eMbjK1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>All plugged up?</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-841111904">
+        <header>
+          <div class="meta">Wed, 21 Jul 2010 09:00:12 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/841111904" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5x043DhHH1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>iPhone 4 decal</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-841112382">
+        <header>
+          <div class="meta">Wed, 21 Jul 2010 09:00:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/841112382" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5x066tGip1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Cooling off.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-836983654">
+        <header>
+          <div class="meta">Tue, 20 Jul 2010 10:04:06 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/836983654" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5u81yZqIz1qzp1zzo1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://willzone.tumblr.com/post/836851742/balls-1" target="_blank">willzone</a>:</p>
+<blockquote>
+<p>Balls: 1<br/>Strikes: 0</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-836983139">
+        <header>
+          <div class="meta">Tue, 20 Jul 2010 10:03:56 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/836983139" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5v8agTDwg1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>night cap</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-836982333">
+        <header>
+          <div class="meta">Tue, 20 Jul 2010 10:03:42 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/836982333" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5v881Fc4E1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Just a little bit further..</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-816159186">
+        <header>
+          <div class="meta">Thu, 15 Jul 2010 11:58:41 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/816159186" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5kuxr85Wr1qzpwi0o1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://thedailywh.at/post/813462896/late-links-you-know-your-breasts-are-too-large" target="_blank">thedailywhat</a>:</p>
+<blockquote>What can I say, I love coming here.<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-816158609">
+        <header>
+          <div class="meta">Thu, 15 Jul 2010 11:58:31 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/816158609" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5g9qyRkkO1qz4s3wo1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://szymon.tumblr.com/post/815406466/human-shaped-herb-garden-from-earthscape" target="_blank">szymon</a>:</p>
+<blockquote>
+<p>human-shaped <a href="http://www.earthscape.co.jp/" target="_blank">herb garden</a> from earthscape</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-816159458">
+        <header>
+          <div class="meta">Thu, 15 Jul 2010 11:58:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/816159458" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5m4mjfvlQ1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Fools get tossed.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-816157974">
+        <header>
+          <div class="meta">Thu, 15 Jul 2010 11:58:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/816157974" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5m4lilJ1I1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>circle jerk <br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-807083074">
+        <header>
+          <div class="meta">Tue, 13 Jul 2010 09:57:34 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/807083074" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5i9aqC7ur1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Current status update.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-807082842">
+        <header>
+          <div class="meta">Tue, 13 Jul 2010 09:57:30 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/807082842" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5i9ct8DR51qzbs6po1_400.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Win!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-807082554">
+        <header>
+          <div class="meta">Tue, 13 Jul 2010 09:57:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/807082554" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5i9ho5OlM1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote><a href="http://www.newsbiscuit.com/2010/07/05/maradona-kicks-damaging-football-habit-and-returns-to-cocaine/" target="_blank">Maradona kicks damaging football habit and returns to cocaine</a></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-807082327">
+        <header>
+          <div class="meta">Tue, 13 Jul 2010 09:57:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/807082327" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l5i9g8BO1U1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Hmm.<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-781802372">
+        <header>
+          <div class="meta">Wed, 07 Jul 2010 11:09:19 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/781802372" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l57793Xoly1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>The dog days of summer.<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-781801861">
+        <header>
+          <div class="meta">Wed, 07 Jul 2010 11:09:10 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/781801861" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l55f64DWBV1qanb21o1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://fuckyeahalbuquerque.tumblr.com/post/777659580/rah-rah-rah" target="_blank">fuckyeahalbuquerque</a>:</p>
+<blockquote>
+<p>rah rah rah</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-781801310">
+        <header>
+          <div class="meta">Wed, 07 Jul 2010 11:08:57 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/781801310" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l577wxVPhS1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Honey, I can explain everything.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-777455240">
+        <header>
+          <div class="meta">Tue, 06 Jul 2010 10:19:51 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/777455240" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l52a0sanSq1qzpwi0o1_640.gif" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://thedailywh.at/post/771057204/the-joy-of-tech" target="_blank">thedailywhat</a>:</p>
+<blockquote>
+<p><a href="http://www.geekculture.com/joyoftech/joyarchives/1413.html" target="_blank">The Joy of Tech</a></p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-777454978">
+        <header>
+          <div class="meta">Tue, 06 Jul 2010 10:19:46 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/777454978" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l55bzrjDkU1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Summer Special</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-777454723">
+        <header>
+          <div class="meta">Tue, 06 Jul 2010 10:19:41 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/777454723" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l55a7q26np1qzbs6po1_540.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>ǝsnoɥ</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-777454505">
+        <header>
+          <div class="meta">Tue, 06 Jul 2010 10:19:36 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/777454505" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l529m88CO51qz4u07o1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://topherchris.com/post/771036089" target="_blank">topherchris</a>:</p>
+<blockquote>
+<p>America, Fuck Yeah!</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-777455504">
+        <header>
+          <div class="meta">Tue, 06 Jul 2010 10:19:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/777455504" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l55bqnqu3K1qzbs6po1_r2_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>The day I lost control..</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-758546548">
+        <header>
+          <div class="meta">Thu, 01 Jul 2010 12:05:38 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/758546548" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4w7k02e8f1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>iPaid too much</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-758545993">
+        <header>
+          <div class="meta">Thu, 01 Jul 2010 12:05:30 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/758545993" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4uilhaFVX1qzpwi0o1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://thedailywh.at/post/755464003/this-x-that-know-this-report-microsoft" target="_blank">thedailywhat</a>:</p>
+<blockquote><a href="http://adambelanger.com/2010/04/11/hatchet-key-hook/" target="_blank">Hatchet Key Hook</a>
+<ul></ul></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-758545646">
+        <header>
+          <div class="meta">Thu, 01 Jul 2010 12:05:25 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/758545646" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4w05fmwKw1qzpwi0o1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://thedailywh.at/post/758091040/when-you-see-it-of-the-day-youll-be-extremely" target="_blank">thedailywhat</a>:</p>
+<blockquote>
+<p>Denim dresses are so hot.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-758545121">
+        <header>
+          <div class="meta">Thu, 01 Jul 2010 12:05:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/758545121" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4w7hjoVdS1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Heavy shit.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-758543808">
+        <header>
+          <div class="meta">Thu, 01 Jul 2010 12:04:47 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/758543808" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4w7iqLcLo1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Facebook is hard to quit.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-754379880">
+        <header>
+          <div class="meta">Wed, 30 Jun 2010 10:37:29 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/754379880" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4mzb7r0RQ1qz4s3wo1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://szymon.tumblr.com/post/749093441/poor-trees-from-steven-burke" target="_blank">szymon</a>:</p>
+<blockquote>
+<p><a href="http://www.recyclart.org/2010/06/poor-little-trees/" target="_blank">Poor trees</a> from Steven Burke</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-754379467">
+        <header>
+          <div class="meta">Wed, 30 Jun 2010 10:37:24 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/754379467" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4u89uqO761qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>African street art.<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-754379180">
+        <header>
+          <div class="meta">Wed, 30 Jun 2010 10:37:18 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/754379180" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4s85bAhw31qzp1zzo1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://willzone.tumblr.com/post/750503611/attack" target="_blank">willzone</a>:</p>
+<blockquote>
+<p><span class="status-content">ATTACK!!</span></p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-754380296">
+        <header>
+          <div class="meta">Wed, 30 Jun 2010 10:37:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/754380296" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4u8d1CXE41qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>HMMMM&hellip;</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-746171021">
+        <header>
+          <div class="meta">Mon, 28 Jun 2010 09:57:19 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/746171021" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4npcaZbzF1qzpwi0o1_640.gif" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://thedailywh.at/post/742448057/tfd" target="_blank">thedailywhat</a>:</p>
+<blockquote>
+<p>None-of-your-business card <a href="http://www.toothpastefordinner.com/archives/2010/Jun/?#1340" target="_blank">(TfD</a>)</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-746170569">
+        <header>
+          <div class="meta">Mon, 28 Jun 2010 09:57:12 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/746170569" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4qgmzCeKB1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Prehistoric love</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-746170058">
+        <header>
+          <div class="meta">Mon, 28 Jun 2010 09:56:59 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/746170058" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4olt2tZPX1qz9bwro1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://theduty.tumblr.com/post/742374313/heyyyy-thats-a-pretty-good-price" target="_blank">theduty</a>:</p>
+<blockquote>
+<p><em>heyyyy…</em></p>
+<p><em>that’s a pretty good price!</em></p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-746169682">
+        <header>
+          <div class="meta">Mon, 28 Jun 2010 09:56:51 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/746169682" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4qctbA7p21qzpwi0o1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://thedailywh.at/post/745962511/street-art-of-the-day-hot-on-the-heels-of-their" target="_blank">thedailywhat</a>:</p>
+<blockquote>
+<p><a href="http://www.billboardliberation.com/" target="_blank">The Billboard Liberation Front</a> (BLF) is honored to announce a new marketing partnership with Phillip Morris that finally brings together the rugged sense of American independence with your most important choice as a consumer: your death.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-746169454">
+        <header>
+          <div class="meta">Mon, 28 Jun 2010 09:56:44 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/746169454" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4q6yqDDwk1qzpwi0o1_1280.png" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://thedailywh.at/post/745712352/tee-of-the-day-knock-knock-by-nathan-w-pyle" target="_blank">thedailywhat</a>:</p>
+<blockquote>
+<p>Knock, Knock. (Spoiler alert!)</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-746169086">
+        <header>
+          <div class="meta">Mon, 28 Jun 2010 09:56:38 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/746169086" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4jb4suL2d1qz7um3o1_500.gif" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://dogfromspace.tumblr.com/post/732485245/gelfling-goulcher-marymoo-via-mindset" target="_blank">dogfromspace</a>:</p>
+<blockquote>
+<p>Deal with it.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-722799348">
+        <header>
+          <div class="meta">Mon, 21 Jun 2010 12:42:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/722799348" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l440auG5AU1qz9bwro1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://theduty.tumblr.com/post/704472367/x-ray-pin-up-calendar-now-thats-takin-it-all" target="_blank">theduty</a>:</p>
+<blockquote>
+<p>…now that’s takin’ it <em>ALL</em> off.</p>
+<p><strong><a href="http://izismile.com/2010/06/16/clever_calendar_for_medical_equipment_14_pics.html" target="_blank">X-Ray Pin-Up Calendar</a></strong></p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-722798648">
+        <header>
+          <div class="meta">Mon, 21 Jun 2010 12:41:51 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/722798648" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4dqfvY0pg1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>It&rsquo;s not mine!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-722798164">
+        <header>
+          <div class="meta">Mon, 21 Jun 2010 12:41:40 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/722798164" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4dqdv9vZR1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>baby big feet</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-722797730">
+        <header>
+          <div class="meta">Mon, 21 Jun 2010 12:41:30 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/722797730" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l4dq9vPXH71qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Picture me strollin&rsquo;</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-701789337">
+        <header>
+          <div class="meta">Tue, 15 Jun 2010 12:13:43 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/701789337" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l42eqdpdR21qanb21o1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Vuvuzela Hero</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-701789069">
+        <header>
+          <div class="meta">Tue, 15 Jun 2010 12:13:37 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/701789069" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3zb48pMaO1qz4s3wo1_500.png" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://szymon.tumblr.com/post/695562369/i-love-this-packaging-by-hasan-partners" target="_blank">szymon</a>:</p>
+<blockquote>
+<p><a href="http://www.hasanpartners.fi/" target="_blank">Hasan &amp; Partners</a></p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-701787589">
+        <header>
+          <div class="meta">Tue, 15 Jun 2010 12:13:01 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/701787589" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l42kp0My7d1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Surf&rsquo;s up!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-701789605">
+        <header>
+          <div class="meta">Tue, 15 Jun 2010 12:13:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/701789605" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l42kusGWs11qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>…gather round &amp; watch an experienced woman please 12 men at once!!!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-701788622">
+        <header>
+          <div class="meta">Tue, 15 Jun 2010 12:13:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/701788622" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l42kj7vTY61qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>facebook life<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-701786964">
+        <header>
+          <div class="meta">Tue, 15 Jun 2010 12:12:48 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/701786964" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l42kmrupDR1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Hello? Ambulance? I&rsquo;M SHRINKING!!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-683603778">
+        <header>
+          <div class="meta">Thu, 10 Jun 2010 06:18:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/683603778" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3supsaAvq1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>This little piggy goes to the market..</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-683603572">
+        <header>
+          <div class="meta">Thu, 10 Jun 2010 06:17:54 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/683603572" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3r2ib4Wd21qz4dqwo1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://blog.deleteyourself.com/post/680798536/killer-app" target="_blank">deleteyourself</a>:</p>
+<blockquote>
+<p>Killer app.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-683603384">
+        <header>
+          <div class="meta">Thu, 10 Jun 2010 06:17:48 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/683603384" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3sv9y6v4O1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>NOM NOM</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-683602843">
+        <header>
+          <div class="meta">Thu, 10 Jun 2010 06:17:35 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/683602843" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3surbiFMb1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Don&rsquo;t forget Dad.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-683602289">
+        <header>
+          <div class="meta">Thu, 10 Jun 2010 06:17:19 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/683602289" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3suvlfvmd1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Algaegator</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-683601994">
+        <header>
+          <div class="meta">Thu, 10 Jun 2010 06:17:12 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/683601994" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3svfgYB0w1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Sorry Mr. Li, you are too yellow.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-683603118">
+        <header>
+          <div class="meta">Thu, 10 Jun 2010 06:17:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/683603118" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3svasjWz01qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>lead by example</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-683601719">
+        <header>
+          <div class="meta">Thu, 10 Jun 2010 06:17:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/683601719" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3suoi8g6F1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>waiting on whoppers<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-683601591">
+        <header>
+          <div class="meta">Thu, 10 Jun 2010 06:16:57 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/683601591" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3nt45hPyn1qzpwi0o1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://thedailywh.at/post/675054380/stuff-no-one-told-me" target="_blank">thedailywhat</a>:</p>
+<blockquote>
+<p><a href="http://stuffnoonetoldme.blogspot.com/2010/06/blog-post.html" target="_blank">Stuff No One Told Me</a>.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-660693326">
+        <header>
+          <div class="meta">Thu, 03 Jun 2010 11:46:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/660693326" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3gc68IzNA1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Alright, let&rsquo;s roll!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-660683040">
+        <header>
+          <div class="meta">Thu, 03 Jun 2010 11:41:56 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/660683040" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3gbq9VIQu1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Super Mario Bros - BP Water Level</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-660682722">
+        <header>
+          <div class="meta">Thu, 03 Jun 2010 11:41:48 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/660682722" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l37qu4sV6J1qzekdio1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://www.ifuckinghatebrent.com/post/646810982/ohhhlife-stonerparty-story-of-my-life-tonight" target="_blank">ifuckinghatebrent</a>:</p>
+<blockquote>
+<p>HELP!</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-660682439">
+        <header>
+          <div class="meta">Thu, 03 Jun 2010 11:41:39 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/660682439" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l3gbs3aZIE1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>You should be ashamed of yourself.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-644060746">
+        <header>
+          <div class="meta">Sat, 29 May 2010 09:16:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/644060746" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l35femitrB1qz9bwro1_500.png" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://theduty.tumblr.com/post/641717466/sometimes-shit-gets-real-via-tc" target="_blank">theduty</a>:</p>
+<blockquote>
+<p>sometimes…</p>
+<p><em>shit gets real.</em></p>
+<p>via <a href="http://topherchris.com/" target="_blank">TC.</a></p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-641133427">
+        <header>
+          <div class="meta">Fri, 28 May 2010 09:40:31 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/641133427" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l351w3KHIR1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>SCRATCHIN&rsquo;</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-641133296">
+        <header>
+          <div class="meta">Fri, 28 May 2010 09:40:27 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/641133296" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l33yz1UVLU1qzigjno1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://gravyholocaust.tumblr.com/post/639393895/helenofdestroy-studentloansforbeermoney-oh-army" target="_blank">gravyholocaust</a>:</p>
+<blockquote>
+<p>Oh Army days..</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-641133153">
+        <header>
+          <div class="meta">Fri, 28 May 2010 09:40:23 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/641133153" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l33aybSpXa1qz9bwro1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://theduty.tumblr.com/post/638155533/let-this-be-a-lesson-to-you" target="_blank">theduty</a>:</p>
+<blockquote>
+<p>let this be a lesson to you.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-641132701">
+        <header>
+          <div class="meta">Fri, 28 May 2010 09:40:05 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/641132701" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l351xrGMOj1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>political road rage</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-638082234">
+        <header>
+          <div class="meta">Thu, 27 May 2010 10:15:47 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/638082234" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l338akK3c11qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Not like the others</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-638082106">
+        <header>
+          <div class="meta">Thu, 27 May 2010 10:15:43 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/638082106" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2zn4oeCiR1qz9bwro1_540.png" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://theduty.tumblr.com/post/631904539/glory-days" target="_blank">theduty</a>:</p>
+<blockquote>
+<p>glory days.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-638081730">
+        <header>
+          <div class="meta">Thu, 27 May 2010 10:15:31 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/638081730" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l338fyhovA1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>The kid is going nowhere fast</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-638081494">
+        <header>
+          <div class="meta">Thu, 27 May 2010 10:15:23 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/638081494" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l338hcltqg1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>A message from the Pope.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-638081216">
+        <header>
+          <div class="meta">Thu, 27 May 2010 10:15:15 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/638081216" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l338jbamIa1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Meanwhile in Japan</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-638080849">
+        <header>
+          <div class="meta">Thu, 27 May 2010 10:15:05 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/638080849" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l338dw1W1e1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Rikes, Raggy! Ruh-Roh!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-631613640">
+        <header>
+          <div class="meta">Tue, 25 May 2010 09:15:51 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/631613640" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2zgmxKjH21qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Wrist ruler</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-631613518">
+        <header>
+          <div class="meta">Tue, 25 May 2010 09:15:47 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/631613518" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2ykscaiOj1qznj8ho1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://rapvsweden.com/post/630466745/thegrandarchives" target="_blank">rapvsweden</a>:</p>
+<blockquote>
+<p>U-MAAAAD</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-631613327">
+        <header>
+          <div class="meta">Tue, 25 May 2010 09:15:40 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/631613327" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2mh6c4Po31qayprio1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://willzone.tumblr.com/post/631504238/pigeoneyeddevilwoman-popartinferno-via" target="_blank">willzone</a>:</p>
+<blockquote>Zombie Bob Ross</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-631613002">
+        <header>
+          <div class="meta">Tue, 25 May 2010 09:15:20 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/631613002" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2s8cj6ZLP1qz9bwro1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://theduty.tumblr.com/post/619753265/oh-over-there-thats-just-albert-from-the" target="_blank">theduty</a>:</p>
+<blockquote>
+<p>oh. over there?</p>
+<p>…that’s just Albert from the block.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-631612191">
+        <header>
+          <div class="meta">Tue, 25 May 2010 09:15:11 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/631612191" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2zgpaiZQs1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Joel Smoker</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-631613906">
+        <header>
+          <div class="meta">Tue, 25 May 2010 09:15:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/631613906" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2y5yj1VJr1qz9bwro1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://theduty.tumblr.com/post/629383606/meanwhile-in-japan" target="_blank">theduty</a>:</p>
+<blockquote>
+<p><em>Meanwhile in Japan…</em></p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-616615352">
+        <header>
+          <div class="meta">Thu, 20 May 2010 09:58:20 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/616615352" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2q9ruBG4H1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Smoke Break</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-616615072">
+        <header>
+          <div class="meta">Thu, 20 May 2010 09:58:12 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/616615072" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2q6rtbwyj1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>McYoga</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-616614770">
+        <header>
+          <div class="meta">Thu, 20 May 2010 09:58:05 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/616614770" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2kp7pc2A81qzp1zzo1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://willzone.tumblr.com/post/610503277/awww-poor-virgil" target="_blank">willzone</a>:</p>
+<blockquote>
+<p>Poor Virgil.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-616614491">
+        <header>
+          <div class="meta">Thu, 20 May 2010 09:57:57 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/616614491" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2ncktkXfY1qanb21o1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://fuckyeahalbuquerque.tumblr.com/post/611942097/ohm-nom-nom-oh-wait" target="_blank">fuckyeahalbuquerque</a>:</p>
+<blockquote>
+<p>Ohm nom nom … oh… wait…</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-607762634">
+        <header>
+          <div class="meta">Mon, 17 May 2010 13:29:08 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/607762634" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2kz7iT8d81qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Run man, run!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-607762297">
+        <header>
+          <div class="meta">Mon, 17 May 2010 13:28:58 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/607762297" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2kyk1BRvq1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://www.ifuckinghatebrent.com/post/607270856/london-fashion-capital-of-the-world" target="_blank">ifuckinghatebrent</a>:</p>
+<blockquote>
+<p>London, Fashion Capital of the world</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-607762052">
+        <header>
+          <div class="meta">Mon, 17 May 2010 13:28:53 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/607762052" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2ky84xsl91qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Fresh Cop Porn</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-607761860">
+        <header>
+          <div class="meta">Mon, 17 May 2010 13:28:48 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/607761860" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2ky76TSZN1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>knife wielding midgets</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-598442385">
+        <header>
+          <div class="meta">Fri, 14 May 2010 09:28:11 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/598442385" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2f49umQNx1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Another week over.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-598442135">
+        <header>
+          <div class="meta">Fri, 14 May 2010 09:28:05 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/598442135" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2f3kiLKqb1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Who&rsquo;s hungry?<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-598442045">
+        <header>
+          <div class="meta">Fri, 14 May 2010 09:28:01 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/598442045" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2f12np8db1qanb21o1_500.gif" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://fuckyeahalbuquerque.tumblr.com/post/598318580/jessica-lyew-aye" target="_blank">fuckyeahalbuquerque</a>:</p>
+<blockquote><a href="http://www.jessicala.com/" target="_blank">Jessica Lyew Aye</a></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-598441907">
+        <header>
+          <div class="meta">Fri, 14 May 2010 09:27:56 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/598441907" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2bc32pJCE1qzs26lo1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://gravyholocaust.tumblr.com/post/592685943/via-eltron-busted" target="_blank">gravyholocaust</a>:</p>
+<blockquote>
+
+<p>Busted</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-598441753">
+        <header>
+          <div class="meta">Fri, 14 May 2010 09:27:51 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/598441753" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2f3i4x5K11qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>industrial love</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-598441582">
+        <header>
+          <div class="meta">Fri, 14 May 2010 09:27:46 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/598441582" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2f3foXAuF1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Never run out of toilet paper again.</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-589938961">
+        <header>
+          <div class="meta">Tue, 11 May 2010 09:48:57 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/589938961" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l29l82ewC41qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>don’t make that face</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-589938686">
+        <header>
+          <div class="meta">Tue, 11 May 2010 09:48:47 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/589938686" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l1hzt4dby31qzbvixo1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://seanorr.tumblr.com/post/562913370/unicorngirl-cannibalcomfort" target="_blank">seanorr</a>:</p>
+<blockquote>
+<p>freedom</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-589938431">
+        <header>
+          <div class="meta">Tue, 11 May 2010 09:48:33 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/589938431" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l26pnzi2k01qzpfzro1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p>(via <a href="http://futurabolditalic.com/" target="_blank">futurabi</a>)</p>
+<blockquote>What</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-589938006">
+        <header>
+          <div class="meta">Tue, 11 May 2010 09:48:26 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/589938006" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l26h5k0JZz1qam6ylo1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://unhappyhipsters.com/post/587208227/even-the-roof-was-sinking-into-a-major" target="_blank">unhappyhipsters</a>:</p>
+<blockquote>
+<p>Even the roof was sinking into a major depression. </p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-589937815">
+        <header>
+          <div class="meta">Tue, 11 May 2010 09:48:10 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/589937815" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l27qgkC3ae1qanb21o1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p>(via <a href="http://fuckyeahalbuquerque.tumblr.com/" target="_blank">fuckyeahalbuquerque</a>)</p>
+<blockquote>Doing eight things at once..<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-589937277">
+        <header>
+          <div class="meta">Tue, 11 May 2010 09:47:00 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/589937277" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l26q2iLPVh1qzpfzro1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://futurabolditalic.com/post/585769548/dont-mom" target="_blank">futurabi</a>:</p>
+<blockquote>
+<p>Mother&rsquo;s Day</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-587040944">
+        <header>
+          <div class="meta">Mon, 10 May 2010 08:36:17 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/587040944" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l27m0eGs0n1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Eaasy Fellaa!</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-587039921">
+        <header>
+          <div class="meta">Mon, 10 May 2010 08:35:45 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/587039921" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2380wVb1K1qzdqpyo1_1280.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>CHOMP</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-587039409">
+        <header>
+          <div class="meta">Mon, 10 May 2010 08:35:33 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/587039409" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l27mikKexE1qzbs6po1_400.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Not everybody was thrilled with their position in the family.<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-587039164">
+        <header>
+          <div class="meta">Mon, 10 May 2010 08:35:26 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/587039164" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l27lywELEX1qzbs6po1_r1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>Shut your trap.<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-578956254">
+        <header>
+          <div class="meta">Fri, 07 May 2010 08:21:11 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/578956254" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l1yhck68pR1qa1c6so1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://skateordieyouboner.tumblr.com/post/576420136" target="_blank">skateordieyouboner</a>:</p>
+<blockquote>The Shame &amp; Guilt Issue</blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-578956044">
+        <header>
+          <div class="meta">Fri, 07 May 2010 08:21:03 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/578956044" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l2220sQ16b1qzbs6po1_500.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><blockquote>&ldquo;No means no for this female squirrel who uses kung-fu tactics to fend off the advances of an amorous admirer.&rdquo; (<a target="_blank" href="http://www.dailymail.co.uk/news/article-1274279/Female-squirrel-gets-kicks-rejecting-beaus-amorous-advances.html">more</a>)<br/></blockquote></div>
+        
+      </article>
+    </section>
+  
+
+    <section class="slide">
+      <article class="card" id="p-578955938">
+        <header>
+          <div class="meta">Fri, 07 May 2010 08:20:59 · photo</div>
+          <div><a href="https://www.thewhatever.com/post/578955938" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+        </header>
+        <div class="media"><img src="https://64.media.tumblr.com/tumblr_l20hqkNN8R1qz9bwro1_640.jpg" loading="lazy" alt="" /></div>
+        <div class="caption"><p><a href="http://theduty.tumblr.com/post/576712249/mothers-day-2010" target="_blank">theduty</a>:</p>
+<blockquote>
+<p>Mother’s Day 2010.</p>
+</blockquote></div>
+        
+      </article>
+    </section>
+  
+      </section>
+      <div class="jumpWrap">
+        <label>Jump to post on this page</label>
+        <div class="jumpThumbRow" id="jumpPost">
+          <button class="jumpThumb" data-idx="0" title="Mon, 30 Aug 2010 12:57:48"><img src="https://64.media.tumblr.com/tumblr_l7zce7YPft1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>1</span></button><button class="jumpThumb" data-idx="1" title="Mon, 30 Aug 2010 12:57:00"><img src="https://64.media.tumblr.com/tumblr_l7zchkVYJU1qzbs6po1_r2_250.jpg" loading="lazy" alt="" /><span>2</span></button><button class="jumpThumb" data-idx="2" title="Wed, 25 Aug 2010 09:18:00"><img src="https://64.media.tumblr.com/tumblr_l7puap54gk1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>3</span></button><button class="jumpThumb" data-idx="3" title="Wed, 25 Aug 2010 09:17:40"><img src="https://64.media.tumblr.com/tumblr_l7puc3o4BS1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>4</span></button><button class="jumpThumb" data-idx="4" title="Wed, 25 Aug 2010 09:17:37"><img src="https://64.media.tumblr.com/tumblr_l7h2ptN3LU1qaro0lo1_250.jpg" loading="lazy" alt="" /><span>5</span></button><button class="jumpThumb" data-idx="5" title="Wed, 25 Aug 2010 09:17:00"><img src="https://64.media.tumblr.com/tumblr_l7pud9ZbAC1qzbs6po1_r3_250.jpg" loading="lazy" alt="" /><span>6</span></button><button class="jumpThumb" data-idx="6" title="Tue, 24 Aug 2010 12:17:14"><img src="https://64.media.tumblr.com/tumblr_l7o7c8WDE21qzbs6po1_250.jpg" loading="lazy" alt="" /><span>7</span></button><button class="jumpThumb" data-idx="7" title="Tue, 24 Aug 2010 12:17:10"><img src="https://64.media.tumblr.com/tumblr_l7o79vTYl31qzbs6po1_250.jpg" loading="lazy" alt="" /><span>8</span></button><button class="jumpThumb" data-idx="8" title="Tue, 24 Aug 2010 12:17:06"><img src="https://64.media.tumblr.com/tumblr_l7o7khCMSu1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>9</span></button><button class="jumpThumb" data-idx="9" title="Tue, 24 Aug 2010 12:17:00"><img src="https://64.media.tumblr.com/tumblr_l7o7h8BuH01qzbs6po1_250.jpg" loading="lazy" alt="" /><span>10</span></button><button class="jumpThumb" data-idx="10" title="Tue, 24 Aug 2010 12:16:57"><img src="https://64.media.tumblr.com/tumblr_l7o7j00cWf1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>11</span></button><button class="jumpThumb" data-idx="11" title="Fri, 20 Aug 2010 00:02:46"><img src="https://64.media.tumblr.com/tumblr_l7cvygUBH71qzbs6po1_250.jpg" loading="lazy" alt="" /><span>12</span></button><button class="jumpThumb" data-idx="12" title="Wed, 18 Aug 2010 09:32:06"><img src="https://64.media.tumblr.com/tumblr_l7cvutVUJa1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>13</span></button><button class="jumpThumb" data-idx="13" title="Wed, 18 Aug 2010 09:31:54"><img src="https://64.media.tumblr.com/tumblr_l7cw0fO4nc1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>14</span></button><button class="jumpThumb" data-idx="14" title="Tue, 17 Aug 2010 23:59:45"><img src="https://64.media.tumblr.com/tumblr_l73n7atxcz1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>15</span></button><button class="jumpThumb" data-idx="15" title="Mon, 16 Aug 2010 09:40:17"><img src="https://64.media.tumblr.com/tumblr_l797acQZgG1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>16</span></button><button class="jumpThumb" data-idx="16" title="Mon, 16 Aug 2010 09:39:01"><img src="https://64.media.tumblr.com/tumblr_l797boK2Cd1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>17</span></button><button class="jumpThumb" data-idx="17" title="Fri, 13 Aug 2010 09:41:10"><img src="https://64.media.tumblr.com/tumblr_l73n5uVJ901qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>18</span></button><button class="jumpThumb" data-idx="18" title="Fri, 13 Aug 2010 09:41:00"><img src="https://64.media.tumblr.com/tumblr_l73ne1LoqA1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>19</span></button><button class="jumpThumb" data-idx="19" title="Thu, 12 Aug 2010 10:19:58"><img src="https://64.media.tumblr.com/tumblr_l6z693axJE1qz5njko1_250.jpg" loading="lazy" alt="" /><span>20</span></button><button class="jumpThumb" data-idx="20" title="Thu, 12 Aug 2010 10:18:59"><img src="https://64.media.tumblr.com/tumblr_l71ss8D5Y61qzbs6po1_250.jpg" loading="lazy" alt="" /><span>21</span></button><button class="jumpThumb" data-idx="21" title="Thu, 12 Aug 2010 10:18:44"><img src="https://64.media.tumblr.com/tumblr_l6xcvjr6V61qzgxpko1_250.jpg" loading="lazy" alt="" /><span>22</span></button><button class="jumpThumb" data-idx="22" title="Mon, 09 Aug 2010 13:44:24"><img src="https://64.media.tumblr.com/tumblr_l6wka0is7s1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>23</span></button><button class="jumpThumb" data-idx="23" title="Mon, 09 Aug 2010 13:34:06"><img src="https://64.media.tumblr.com/tumblr_l6whdeQSYc1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>24</span></button><button class="jumpThumb" data-idx="24" title="Mon, 09 Aug 2010 13:33:27"><img src="https://64.media.tumblr.com/tumblr_l6whl5LZVc1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>25</span></button><button class="jumpThumb" data-idx="25" title="Wed, 04 Aug 2010 09:33:24"><img src="https://64.media.tumblr.com/tumblr_l6bxf3YveO1qaobbko1_250.jpg" loading="lazy" alt="" /><span>26</span></button><button class="jumpThumb" data-idx="26" title="Wed, 04 Aug 2010 09:33:20"><img src="https://64.media.tumblr.com/tumblr_l6l5esqU531qa42jro1_250.jpg" loading="lazy" alt="" /><span>27</span></button><button class="jumpThumb" data-idx="27" title="Wed, 04 Aug 2010 09:33:17"><img src="https://64.media.tumblr.com/tumblr_l6l9z9j0Hr1qad74xo1_250.jpg" loading="lazy" alt="" /><span>28</span></button><button class="jumpThumb" data-idx="28" title="Tue, 03 Aug 2010 10:32:58"><img src="https://64.media.tumblr.com/tumblr_l6jczxbUMd1qzp1zzo1_250.jpg" loading="lazy" alt="" /><span>29</span></button><button class="jumpThumb" data-idx="29" title="Tue, 03 Aug 2010 10:32:52"><img src="https://64.media.tumblr.com/tumblr_l6l688JsPX1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>30</span></button><button class="jumpThumb" data-idx="30" title="Tue, 03 Aug 2010 10:32:40"><img src="https://64.media.tumblr.com/tumblr_l5ue33bdoM1qcim6yo1_250.jpg" loading="lazy" alt="" /><span>31</span></button><button class="jumpThumb" data-idx="31" title="Fri, 30 Jul 2010 10:31:38"><img src="https://64.media.tumblr.com/tumblr_l6drzcxwQf1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>32</span></button><button class="jumpThumb" data-idx="32" title="Fri, 30 Jul 2010 10:31:18"><img src="https://64.media.tumblr.com/tumblr_l6dsgaxWzD1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>33</span></button><button class="jumpThumb" data-idx="33" title="Fri, 30 Jul 2010 10:31:09"><img src="https://64.media.tumblr.com/tumblr_l6dlfbTuSN1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>34</span></button><button class="jumpThumb" data-idx="34" title="Fri, 30 Jul 2010 10:30:19"><img src="https://64.media.tumblr.com/tumblr_l6byi2y8ye1qz9bwro1_250.jpg" loading="lazy" alt="" /><span>35</span></button><button class="jumpThumb" data-idx="35" title="Thu, 29 Jul 2010 10:30:03"><img src="https://64.media.tumblr.com/tumblr_l6bx15HZVC1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>36</span></button><button class="jumpThumb" data-idx="36" title="Thu, 29 Jul 2010 10:30:00"><img src="https://64.media.tumblr.com/tumblr_l6bx2sHY0T1qzbs6po1_r2_250.jpg" loading="lazy" alt="" /><span>37</span></button><button class="jumpThumb" data-idx="37" title="Thu, 29 Jul 2010 10:29:59"><img src="https://64.media.tumblr.com/tumblr_l68bimUge71qz82ojo1_250.png" loading="lazy" alt="" /><span>38</span></button><button class="jumpThumb" data-idx="38" title="Thu, 29 Jul 2010 10:29:00"><img src="https://64.media.tumblr.com/tumblr_l6bwzeHa3x1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>39</span></button><button class="jumpThumb" data-idx="39" title="Mon, 26 Jul 2010 11:01:00"><img src="https://64.media.tumblr.com/tumblr_l66ey7ZiZ51qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>40</span></button><button class="jumpThumb" data-idx="40" title="Mon, 26 Jul 2010 11:00:49"><img src="https://64.media.tumblr.com/tumblr_l64nchYaoi1qzx3m2o1_250.jpg" loading="lazy" alt="" /><span>41</span></button><button class="jumpThumb" data-idx="41" title="Mon, 26 Jul 2010 11:00:43"><img src="https://64.media.tumblr.com/tumblr_l5iz9aCJNF1qc6qawo1_250.jpg" loading="lazy" alt="" /><span>42</span></button><button class="jumpThumb" data-idx="42" title="Mon, 26 Jul 2010 11:00:38"><img src="https://64.media.tumblr.com/tumblr_l5za01DtZO1qanb21o1_250.jpg" loading="lazy" alt="" /><span>43</span></button><button class="jumpThumb" data-idx="43" title="Thu, 22 Jul 2010 11:00:48"><img src="https://64.media.tumblr.com/tumblr_l5z0hwzUc01qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>44</span></button><button class="jumpThumb" data-idx="44" title="Thu, 22 Jul 2010 11:00:40"><img src="https://64.media.tumblr.com/tumblr_l5z0bbVLIn1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>45</span></button><button class="jumpThumb" data-idx="45" title="Thu, 22 Jul 2010 11:00:36"><img src="https://64.media.tumblr.com/tumblr_l5z0g0OjMw1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>46</span></button><button class="jumpThumb" data-idx="46" title="Wed, 21 Jul 2010 09:00:16"><img src="https://64.media.tumblr.com/tumblr_l5x05eMbjK1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>47</span></button><button class="jumpThumb" data-idx="47" title="Wed, 21 Jul 2010 09:00:12"><img src="https://64.media.tumblr.com/tumblr_l5x043DhHH1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>48</span></button><button class="jumpThumb" data-idx="48" title="Wed, 21 Jul 2010 09:00:00"><img src="https://64.media.tumblr.com/tumblr_l5x066tGip1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>49</span></button><button class="jumpThumb" data-idx="49" title="Tue, 20 Jul 2010 10:04:06"><img src="https://64.media.tumblr.com/tumblr_l5u81yZqIz1qzp1zzo1_250.jpg" loading="lazy" alt="" /><span>50</span></button><button class="jumpThumb" data-idx="50" title="Tue, 20 Jul 2010 10:03:56"><img src="https://64.media.tumblr.com/tumblr_l5v8agTDwg1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>51</span></button><button class="jumpThumb" data-idx="51" title="Tue, 20 Jul 2010 10:03:42"><img src="https://64.media.tumblr.com/tumblr_l5v881Fc4E1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>52</span></button><button class="jumpThumb" data-idx="52" title="Thu, 15 Jul 2010 11:58:41"><img src="https://64.media.tumblr.com/tumblr_l5kuxr85Wr1qzpwi0o1_250.jpg" loading="lazy" alt="" /><span>53</span></button><button class="jumpThumb" data-idx="53" title="Thu, 15 Jul 2010 11:58:31"><img src="https://64.media.tumblr.com/tumblr_l5g9qyRkkO1qz4s3wo1_250.jpg" loading="lazy" alt="" /><span>54</span></button><button class="jumpThumb" data-idx="54" title="Thu, 15 Jul 2010 11:58:00"><img src="https://64.media.tumblr.com/tumblr_l5m4mjfvlQ1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>55</span></button><button class="jumpThumb" data-idx="55" title="Thu, 15 Jul 2010 11:58:00"><img src="https://64.media.tumblr.com/tumblr_l5m4lilJ1I1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>56</span></button><button class="jumpThumb" data-idx="56" title="Tue, 13 Jul 2010 09:57:34"><img src="https://64.media.tumblr.com/tumblr_l5i9aqC7ur1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>57</span></button><button class="jumpThumb" data-idx="57" title="Tue, 13 Jul 2010 09:57:30"><img src="https://64.media.tumblr.com/tumblr_l5i9ct8DR51qzbs6po1_250.jpg" loading="lazy" alt="" /><span>58</span></button><button class="jumpThumb" data-idx="58" title="Tue, 13 Jul 2010 09:57:00"><img src="https://64.media.tumblr.com/tumblr_l5i9ho5OlM1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>59</span></button><button class="jumpThumb" data-idx="59" title="Tue, 13 Jul 2010 09:57:00"><img src="https://64.media.tumblr.com/tumblr_l5i9g8BO1U1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>60</span></button><button class="jumpThumb" data-idx="60" title="Wed, 07 Jul 2010 11:09:19"><img src="https://64.media.tumblr.com/tumblr_l57793Xoly1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>61</span></button><button class="jumpThumb" data-idx="61" title="Wed, 07 Jul 2010 11:09:10"><img src="https://64.media.tumblr.com/tumblr_l55f64DWBV1qanb21o1_250.jpg" loading="lazy" alt="" /><span>62</span></button><button class="jumpThumb" data-idx="62" title="Wed, 07 Jul 2010 11:08:57"><img src="https://64.media.tumblr.com/tumblr_l577wxVPhS1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>63</span></button><button class="jumpThumb" data-idx="63" title="Tue, 06 Jul 2010 10:19:51"><img src="https://64.media.tumblr.com/tumblr_l52a0sanSq1qzpwi0o1_250.gif" loading="lazy" alt="" /><span>64</span></button><button class="jumpThumb" data-idx="64" title="Tue, 06 Jul 2010 10:19:46"><img src="https://64.media.tumblr.com/tumblr_l55bzrjDkU1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>65</span></button><button class="jumpThumb" data-idx="65" title="Tue, 06 Jul 2010 10:19:41"><img src="https://64.media.tumblr.com/tumblr_l55a7q26np1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>66</span></button><button class="jumpThumb" data-idx="66" title="Tue, 06 Jul 2010 10:19:36"><img src="https://64.media.tumblr.com/tumblr_l529m88CO51qz4u07o1_250.jpg" loading="lazy" alt="" /><span>67</span></button><button class="jumpThumb" data-idx="67" title="Tue, 06 Jul 2010 10:19:00"><img src="https://64.media.tumblr.com/tumblr_l55bqnqu3K1qzbs6po1_r2_250.jpg" loading="lazy" alt="" /><span>68</span></button><button class="jumpThumb" data-idx="68" title="Thu, 01 Jul 2010 12:05:38"><img src="https://64.media.tumblr.com/tumblr_l4w7k02e8f1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>69</span></button><button class="jumpThumb" data-idx="69" title="Thu, 01 Jul 2010 12:05:30"><img src="https://64.media.tumblr.com/tumblr_l4uilhaFVX1qzpwi0o1_250.jpg" loading="lazy" alt="" /><span>70</span></button><button class="jumpThumb" data-idx="70" title="Thu, 01 Jul 2010 12:05:25"><img src="https://64.media.tumblr.com/tumblr_l4w05fmwKw1qzpwi0o1_250.jpg" loading="lazy" alt="" /><span>71</span></button><button class="jumpThumb" data-idx="71" title="Thu, 01 Jul 2010 12:05:00"><img src="https://64.media.tumblr.com/tumblr_l4w7hjoVdS1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>72</span></button><button class="jumpThumb" data-idx="72" title="Thu, 01 Jul 2010 12:04:47"><img src="https://64.media.tumblr.com/tumblr_l4w7iqLcLo1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>73</span></button><button class="jumpThumb" data-idx="73" title="Wed, 30 Jun 2010 10:37:29"><img src="https://64.media.tumblr.com/tumblr_l4mzb7r0RQ1qz4s3wo1_250.jpg" loading="lazy" alt="" /><span>74</span></button><button class="jumpThumb" data-idx="74" title="Wed, 30 Jun 2010 10:37:24"><img src="https://64.media.tumblr.com/tumblr_l4u89uqO761qzbs6po1_250.jpg" loading="lazy" alt="" /><span>75</span></button><button class="jumpThumb" data-idx="75" title="Wed, 30 Jun 2010 10:37:18"><img src="https://64.media.tumblr.com/tumblr_l4s85bAhw31qzp1zzo1_250.jpg" loading="lazy" alt="" /><span>76</span></button><button class="jumpThumb" data-idx="76" title="Wed, 30 Jun 2010 10:37:00"><img src="https://64.media.tumblr.com/tumblr_l4u8d1CXE41qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>77</span></button><button class="jumpThumb" data-idx="77" title="Mon, 28 Jun 2010 09:57:19"><img src="https://64.media.tumblr.com/tumblr_l4npcaZbzF1qzpwi0o1_250.gif" loading="lazy" alt="" /><span>78</span></button><button class="jumpThumb" data-idx="78" title="Mon, 28 Jun 2010 09:57:12"><img src="https://64.media.tumblr.com/tumblr_l4qgmzCeKB1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>79</span></button><button class="jumpThumb" data-idx="79" title="Mon, 28 Jun 2010 09:56:59"><img src="https://64.media.tumblr.com/tumblr_l4olt2tZPX1qz9bwro1_250.jpg" loading="lazy" alt="" /><span>80</span></button><button class="jumpThumb" data-idx="80" title="Mon, 28 Jun 2010 09:56:51"><img src="https://64.media.tumblr.com/tumblr_l4qctbA7p21qzpwi0o1_250.jpg" loading="lazy" alt="" /><span>81</span></button><button class="jumpThumb" data-idx="81" title="Mon, 28 Jun 2010 09:56:44"><img src="https://64.media.tumblr.com/tumblr_l4q6yqDDwk1qzpwi0o1_250.png" loading="lazy" alt="" /><span>82</span></button><button class="jumpThumb" data-idx="82" title="Mon, 28 Jun 2010 09:56:38"><img src="https://64.media.tumblr.com/tumblr_l4jb4suL2d1qz7um3o1_250.gif" loading="lazy" alt="" /><span>83</span></button><button class="jumpThumb" data-idx="83" title="Mon, 21 Jun 2010 12:42:00"><img src="https://64.media.tumblr.com/tumblr_l440auG5AU1qz9bwro1_250.jpg" loading="lazy" alt="" /><span>84</span></button><button class="jumpThumb" data-idx="84" title="Mon, 21 Jun 2010 12:41:51"><img src="https://64.media.tumblr.com/tumblr_l4dqfvY0pg1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>85</span></button><button class="jumpThumb" data-idx="85" title="Mon, 21 Jun 2010 12:41:40"><img src="https://64.media.tumblr.com/tumblr_l4dqdv9vZR1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>86</span></button><button class="jumpThumb" data-idx="86" title="Mon, 21 Jun 2010 12:41:30"><img src="https://64.media.tumblr.com/tumblr_l4dq9vPXH71qzbs6po1_250.jpg" loading="lazy" alt="" /><span>87</span></button><button class="jumpThumb" data-idx="87" title="Tue, 15 Jun 2010 12:13:43"><img src="https://64.media.tumblr.com/tumblr_l42eqdpdR21qanb21o1_250.jpg" loading="lazy" alt="" /><span>88</span></button><button class="jumpThumb" data-idx="88" title="Tue, 15 Jun 2010 12:13:37"><img src="https://64.media.tumblr.com/tumblr_l3zb48pMaO1qz4s3wo1_250.png" loading="lazy" alt="" /><span>89</span></button><button class="jumpThumb" data-idx="89" title="Tue, 15 Jun 2010 12:13:01"><img src="https://64.media.tumblr.com/tumblr_l42kp0My7d1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>90</span></button><button class="jumpThumb" data-idx="90" title="Tue, 15 Jun 2010 12:13:00"><img src="https://64.media.tumblr.com/tumblr_l42kusGWs11qzbs6po1_250.jpg" loading="lazy" alt="" /><span>91</span></button><button class="jumpThumb" data-idx="91" title="Tue, 15 Jun 2010 12:13:00"><img src="https://64.media.tumblr.com/tumblr_l42kj7vTY61qzbs6po1_250.jpg" loading="lazy" alt="" /><span>92</span></button><button class="jumpThumb" data-idx="92" title="Tue, 15 Jun 2010 12:12:48"><img src="https://64.media.tumblr.com/tumblr_l42kmrupDR1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>93</span></button><button class="jumpThumb" data-idx="93" title="Thu, 10 Jun 2010 06:18:00"><img src="https://64.media.tumblr.com/tumblr_l3supsaAvq1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>94</span></button><button class="jumpThumb" data-idx="94" title="Thu, 10 Jun 2010 06:17:54"><img src="https://64.media.tumblr.com/tumblr_l3r2ib4Wd21qz4dqwo1_250.jpg" loading="lazy" alt="" /><span>95</span></button><button class="jumpThumb" data-idx="95" title="Thu, 10 Jun 2010 06:17:48"><img src="https://64.media.tumblr.com/tumblr_l3sv9y6v4O1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>96</span></button><button class="jumpThumb" data-idx="96" title="Thu, 10 Jun 2010 06:17:35"><img src="https://64.media.tumblr.com/tumblr_l3surbiFMb1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>97</span></button><button class="jumpThumb" data-idx="97" title="Thu, 10 Jun 2010 06:17:19"><img src="https://64.media.tumblr.com/tumblr_l3suvlfvmd1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>98</span></button><button class="jumpThumb" data-idx="98" title="Thu, 10 Jun 2010 06:17:12"><img src="https://64.media.tumblr.com/tumblr_l3svfgYB0w1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>99</span></button><button class="jumpThumb" data-idx="99" title="Thu, 10 Jun 2010 06:17:00"><img src="https://64.media.tumblr.com/tumblr_l3svasjWz01qzbs6po1_250.jpg" loading="lazy" alt="" /><span>100</span></button><button class="jumpThumb" data-idx="100" title="Thu, 10 Jun 2010 06:17:00"><img src="https://64.media.tumblr.com/tumblr_l3suoi8g6F1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>101</span></button><button class="jumpThumb" data-idx="101" title="Thu, 10 Jun 2010 06:16:57"><img src="https://64.media.tumblr.com/tumblr_l3nt45hPyn1qzpwi0o1_250.jpg" loading="lazy" alt="" /><span>102</span></button><button class="jumpThumb" data-idx="102" title="Thu, 03 Jun 2010 11:46:00"><img src="https://64.media.tumblr.com/tumblr_l3gc68IzNA1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>103</span></button><button class="jumpThumb" data-idx="103" title="Thu, 03 Jun 2010 11:41:56"><img src="https://64.media.tumblr.com/tumblr_l3gbq9VIQu1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>104</span></button><button class="jumpThumb" data-idx="104" title="Thu, 03 Jun 2010 11:41:48"><img src="https://64.media.tumblr.com/tumblr_l37qu4sV6J1qzekdio1_250.jpg" loading="lazy" alt="" /><span>105</span></button><button class="jumpThumb" data-idx="105" title="Thu, 03 Jun 2010 11:41:39"><img src="https://64.media.tumblr.com/tumblr_l3gbs3aZIE1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>106</span></button><button class="jumpThumb" data-idx="106" title="Sat, 29 May 2010 09:16:00"><img src="https://64.media.tumblr.com/tumblr_l35femitrB1qz9bwro1_250.png" loading="lazy" alt="" /><span>107</span></button><button class="jumpThumb" data-idx="107" title="Fri, 28 May 2010 09:40:31"><img src="https://64.media.tumblr.com/tumblr_l351w3KHIR1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>108</span></button><button class="jumpThumb" data-idx="108" title="Fri, 28 May 2010 09:40:27"><img src="https://64.media.tumblr.com/tumblr_l33yz1UVLU1qzigjno1_250.jpg" loading="lazy" alt="" /><span>109</span></button><button class="jumpThumb" data-idx="109" title="Fri, 28 May 2010 09:40:23"><img src="https://64.media.tumblr.com/tumblr_l33aybSpXa1qz9bwro1_250.jpg" loading="lazy" alt="" /><span>110</span></button><button class="jumpThumb" data-idx="110" title="Fri, 28 May 2010 09:40:05"><img src="https://64.media.tumblr.com/tumblr_l351xrGMOj1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>111</span></button><button class="jumpThumb" data-idx="111" title="Thu, 27 May 2010 10:15:47"><img src="https://64.media.tumblr.com/tumblr_l338akK3c11qzbs6po1_250.jpg" loading="lazy" alt="" /><span>112</span></button><button class="jumpThumb" data-idx="112" title="Thu, 27 May 2010 10:15:43"><img src="https://64.media.tumblr.com/tumblr_l2zn4oeCiR1qz9bwro1_250.png" loading="lazy" alt="" /><span>113</span></button><button class="jumpThumb" data-idx="113" title="Thu, 27 May 2010 10:15:31"><img src="https://64.media.tumblr.com/tumblr_l338fyhovA1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>114</span></button><button class="jumpThumb" data-idx="114" title="Thu, 27 May 2010 10:15:23"><img src="https://64.media.tumblr.com/tumblr_l338hcltqg1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>115</span></button><button class="jumpThumb" data-idx="115" title="Thu, 27 May 2010 10:15:15"><img src="https://64.media.tumblr.com/tumblr_l338jbamIa1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>116</span></button><button class="jumpThumb" data-idx="116" title="Thu, 27 May 2010 10:15:05"><img src="https://64.media.tumblr.com/tumblr_l338dw1W1e1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>117</span></button><button class="jumpThumb" data-idx="117" title="Tue, 25 May 2010 09:15:51"><img src="https://64.media.tumblr.com/tumblr_l2zgmxKjH21qzbs6po1_250.jpg" loading="lazy" alt="" /><span>118</span></button><button class="jumpThumb" data-idx="118" title="Tue, 25 May 2010 09:15:47"><img src="https://64.media.tumblr.com/tumblr_l2ykscaiOj1qznj8ho1_250.jpg" loading="lazy" alt="" /><span>119</span></button><button class="jumpThumb" data-idx="119" title="Tue, 25 May 2010 09:15:40"><img src="https://64.media.tumblr.com/tumblr_l2mh6c4Po31qayprio1_250.jpg" loading="lazy" alt="" /><span>120</span></button><button class="jumpThumb" data-idx="120" title="Tue, 25 May 2010 09:15:20"><img src="https://64.media.tumblr.com/tumblr_l2s8cj6ZLP1qz9bwro1_250.jpg" loading="lazy" alt="" /><span>121</span></button><button class="jumpThumb" data-idx="121" title="Tue, 25 May 2010 09:15:11"><img src="https://64.media.tumblr.com/tumblr_l2zgpaiZQs1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>122</span></button><button class="jumpThumb" data-idx="122" title="Tue, 25 May 2010 09:15:00"><img src="https://64.media.tumblr.com/tumblr_l2y5yj1VJr1qz9bwro1_250.jpg" loading="lazy" alt="" /><span>123</span></button><button class="jumpThumb" data-idx="123" title="Thu, 20 May 2010 09:58:20"><img src="https://64.media.tumblr.com/tumblr_l2q9ruBG4H1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>124</span></button><button class="jumpThumb" data-idx="124" title="Thu, 20 May 2010 09:58:12"><img src="https://64.media.tumblr.com/tumblr_l2q6rtbwyj1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>125</span></button><button class="jumpThumb" data-idx="125" title="Thu, 20 May 2010 09:58:05"><img src="https://64.media.tumblr.com/tumblr_l2kp7pc2A81qzp1zzo1_250.jpg" loading="lazy" alt="" /><span>126</span></button><button class="jumpThumb" data-idx="126" title="Thu, 20 May 2010 09:57:57"><img src="https://64.media.tumblr.com/tumblr_l2ncktkXfY1qanb21o1_250.jpg" loading="lazy" alt="" /><span>127</span></button><button class="jumpThumb" data-idx="127" title="Mon, 17 May 2010 13:29:08"><img src="https://64.media.tumblr.com/tumblr_l2kz7iT8d81qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>128</span></button><button class="jumpThumb" data-idx="128" title="Mon, 17 May 2010 13:28:58"><img src="https://64.media.tumblr.com/tumblr_l2kyk1BRvq1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>129</span></button><button class="jumpThumb" data-idx="129" title="Mon, 17 May 2010 13:28:53"><img src="https://64.media.tumblr.com/tumblr_l2ky84xsl91qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>130</span></button><button class="jumpThumb" data-idx="130" title="Mon, 17 May 2010 13:28:48"><img src="https://64.media.tumblr.com/tumblr_l2ky76TSZN1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>131</span></button><button class="jumpThumb" data-idx="131" title="Fri, 14 May 2010 09:28:11"><img src="https://64.media.tumblr.com/tumblr_l2f49umQNx1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>132</span></button><button class="jumpThumb" data-idx="132" title="Fri, 14 May 2010 09:28:05"><img src="https://64.media.tumblr.com/tumblr_l2f3kiLKqb1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>133</span></button><button class="jumpThumb" data-idx="133" title="Fri, 14 May 2010 09:28:01"><img src="https://64.media.tumblr.com/tumblr_l2f12np8db1qanb21o1_250.gif" loading="lazy" alt="" /><span>134</span></button><button class="jumpThumb" data-idx="134" title="Fri, 14 May 2010 09:27:56"><img src="https://64.media.tumblr.com/tumblr_l2bc32pJCE1qzs26lo1_250.jpg" loading="lazy" alt="" /><span>135</span></button><button class="jumpThumb" data-idx="135" title="Fri, 14 May 2010 09:27:51"><img src="https://64.media.tumblr.com/tumblr_l2f3i4x5K11qzbs6po1_250.jpg" loading="lazy" alt="" /><span>136</span></button><button class="jumpThumb" data-idx="136" title="Fri, 14 May 2010 09:27:46"><img src="https://64.media.tumblr.com/tumblr_l2f3foXAuF1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>137</span></button><button class="jumpThumb" data-idx="137" title="Tue, 11 May 2010 09:48:57"><img src="https://64.media.tumblr.com/tumblr_l29l82ewC41qzbs6po1_250.jpg" loading="lazy" alt="" /><span>138</span></button><button class="jumpThumb" data-idx="138" title="Tue, 11 May 2010 09:48:47"><img src="https://64.media.tumblr.com/tumblr_l1hzt4dby31qzbvixo1_250.jpg" loading="lazy" alt="" /><span>139</span></button><button class="jumpThumb" data-idx="139" title="Tue, 11 May 2010 09:48:33"><img src="https://64.media.tumblr.com/tumblr_l26pnzi2k01qzpfzro1_250.jpg" loading="lazy" alt="" /><span>140</span></button><button class="jumpThumb" data-idx="140" title="Tue, 11 May 2010 09:48:26"><img src="https://64.media.tumblr.com/tumblr_l26h5k0JZz1qam6ylo1_250.jpg" loading="lazy" alt="" /><span>141</span></button><button class="jumpThumb" data-idx="141" title="Tue, 11 May 2010 09:48:10"><img src="https://64.media.tumblr.com/tumblr_l27qgkC3ae1qanb21o1_250.jpg" loading="lazy" alt="" /><span>142</span></button><button class="jumpThumb" data-idx="142" title="Tue, 11 May 2010 09:47:00"><img src="https://64.media.tumblr.com/tumblr_l26q2iLPVh1qzpfzro1_250.jpg" loading="lazy" alt="" /><span>143</span></button><button class="jumpThumb" data-idx="143" title="Mon, 10 May 2010 08:36:17"><img src="https://64.media.tumblr.com/tumblr_l27m0eGs0n1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>144</span></button><button class="jumpThumb" data-idx="144" title="Mon, 10 May 2010 08:35:45"><img src="https://64.media.tumblr.com/tumblr_l2380wVb1K1qzdqpyo1_250.jpg" loading="lazy" alt="" /><span>145</span></button><button class="jumpThumb" data-idx="145" title="Mon, 10 May 2010 08:35:33"><img src="https://64.media.tumblr.com/tumblr_l27mikKexE1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>146</span></button><button class="jumpThumb" data-idx="146" title="Mon, 10 May 2010 08:35:26"><img src="https://64.media.tumblr.com/tumblr_l27lywELEX1qzbs6po1_r1_250.jpg" loading="lazy" alt="" /><span>147</span></button><button class="jumpThumb" data-idx="147" title="Fri, 07 May 2010 08:21:11"><img src="https://64.media.tumblr.com/tumblr_l1yhck68pR1qa1c6so1_250.jpg" loading="lazy" alt="" /><span>148</span></button><button class="jumpThumb" data-idx="148" title="Fri, 07 May 2010 08:21:03"><img src="https://64.media.tumblr.com/tumblr_l2220sQ16b1qzbs6po1_250.jpg" loading="lazy" alt="" /><span>149</span></button><button class="jumpThumb" data-idx="149" title="Fri, 07 May 2010 08:20:59"><img src="https://64.media.tumblr.com/tumblr_l20hqkNN8R1qz9bwro1_250.jpg" loading="lazy" alt="" /><span>150</span></button>
+        </div>
+      </div>
+      <div class="navBottom">
+        <a href="./14/">← Newer</a>
+        <span>Page 15 / 23</span>
+        <a href="./16/">Older →</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      if (window.matchMedia('(max-width: 820px)').matches) return;
+      const scroller = document.getElementById('postsScroller');
+      const jump = document.getElementById('jumpPost');
+      if (!scroller) return;
+
+      const thumbs = jump ? Array.from(jump.querySelectorAll('.jumpThumb')) : [];
+
+      const goToIndex = (idx) => {
+        const slides = scroller.querySelectorAll('.slide');
+        const target = slides[idx];
+        if (!target) return;
+        scroller.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+      };
+
+      if (thumbs.length) {
+        thumbs.forEach((el) => {
+          el.addEventListener('click', () => {
+            const idx = Number(el.dataset.idx || 0);
+            goToIndex(idx);
+          });
+        });
+      }
+
+      let wheelLocked = false;
+      const onWheel = (e) => {
+        const deltaY = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
+        if (Math.abs(deltaY) < 1) return;
+        e.preventDefault();
+        if (wheelLocked) return;
+        wheelLocked = true;
+        const viewport = scroller.clientHeight;
+        scroller.scrollBy({ top: deltaY > 0 ? viewport : -viewport, behavior: 'smooth' });
+        window.setTimeout(() => { wheelLocked = false; }, 420);
+      };
+      scroller.addEventListener('wheel', onWheel, { passive: false });
+      window.addEventListener('wheel', onWheel, { passive: false });
+
+      if (thumbs.length) {
+        const setActive = (idx) => {
+          thumbs.forEach((el, i) => el.classList.toggle('active', i === idx));
+          const active = thumbs[idx];
+          if (active) active.scrollIntoView({ block: 'nearest', inline: 'center' });
+        };
+
+        setActive(0);
+
+        scroller.addEventListener('scroll', () => {
+          const viewport = scroller.clientHeight || 1;
+          const idx = Math.max(0, Math.round(scroller.scrollTop / viewport));
+          setActive(idx);
+        }, { passive: true });
+      }
+    })();
+  </script>
+</body>
+</html>
