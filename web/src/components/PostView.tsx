@@ -253,7 +253,9 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                       }
                     }}
                   >
-                    <span className="linkGlyph">🔗</span>
+                    <svg className="linkGlyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path fill="currentColor" d="M10.59 13.41a1 1 0 0 1 0-1.41l3.17-3.17a3 3 0 0 1 4.24 4.24l-2.12 2.12a3 3 0 0 1-4.24 0 1 1 0 1 1-1.41 1.41 5 5 0 0 0 7.07 0l2.12-2.12a5 5 0 1 0-7.07-7.07l-3.17 3.17a3 3 0 0 0 0 4.24 1 1 0 0 1-1.41 1.41 5 5 0 0 1 0-7.07l3.17-3.17a5 5 0 1 1 7.07 7.07l-2.12 2.12a5 5 0 0 1-7.07 0 1 1 0 0 1 1.41-1.41 3 3 0 0 0 4.24 0l2.12-2.12a3 3 0 1 0-4.24-4.24l-3.17 3.17a1 1 0 0 1-1.41 0z"/>
+                    </svg>
                   </button>
                 </div>
                 {/* removed original link */}
