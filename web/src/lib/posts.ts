@@ -8,6 +8,7 @@ export type TumblrPost = {
   date?: string;
   tags?: string[];
   'unix-timestamp'?: number;
+  'note-count'?: number;
   photos?: any[];
   'photo-url-1280'?: string;
   'photo-url-500'?: string;
