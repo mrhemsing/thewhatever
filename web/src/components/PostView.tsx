@@ -4,17 +4,10 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { TumblrPost } from '@/lib/posts';
 
-function shortDate(s?: string) {
-  const raw = String(s || '');
-  // Expected: "Thu, 12 Nov 2015 11:46:08" -> "11/12/2015"
-  const m = raw.match(/\b(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})\b/);
-  if (!m) return raw;
-  const day = String(m[1]).padStart(2, '0');
-  const mon = m[2].toLowerCase();
-  const year = m[3];
-  const map: Record<string, string> = { jan: '01', feb: '02', mar: '03', apr: '04', may: '05', jun: '06', jul: '07', aug: '08', sep: '09', oct: '10', nov: '11', dec: '12' };
-  const mm = map[mon];
-  return mm ? `${mm}/${day}/${year}` : raw;
+function dateNoTime(s?: string) {
+  const raw = String(s || '').trim();
+  // Expected: "Thu, 12 Nov 2015 11:46:08" -> "Thu, 12 Nov 2015"
+  return raw.replace(/\s+\d{1,2}:\d{2}:\d{2}(\s.*)?$/, '').trim();
 }
 
 export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHref, prevPageHref, initialPostId }: { posts: TumblrPost[]; totalPosts: number; pageOffset?: number; nextPageHref?: string | null; prevPageHref?: string | null; initialPostId?: string | null }) {
@@ -265,7 +258,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                 </div>
                 {/* removed original link */}
                 <div className="meta">
-                  <span className="metaDate">{p.date}</span>
+                  <span className="metaDate"><span className="mobileOnly">{dateNoTime(p.date)}</span><span className="desktopOnly">{p.date}</span></span>
                   {/* removed post type */}
                   {p['note-count'] ? <span>{` · ${p['note-count']} notes`}</span> : null}
                 </div>
