@@ -22,7 +22,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .shareToast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(2,6,23,.85);border:1px solid rgba(148,163,184,.28);color:#e5e7eb;padding:8px 12px;border-radius:999px;font-size:12px;opacity:0;transition:opacity .2s ease;pointer-events:none;z-index:9999}
 .shareToast.show{opacity:1}
 .cardOriginal{color:#a7b4c8;font-size:12px;text-decoration:none;white-space:nowrap;flex:0 0 auto}
-.meta{color:#a7b4c8;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:4px}
+.meta{color:#a7b4c8;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:5px}
 .metaDate{display:inline}
 @media (max-width: 1200px){.metaDate{display:inline}}
 .cardHead a{color:#a7b4c8;font-size:12px;text-decoration:none;white-space:nowrap;flex:0 0 auto}
