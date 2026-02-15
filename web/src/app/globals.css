@@ -1,8 +1,8 @@
 *{box-sizing:border-box}
 html,body{max-width:100%;overflow-x:hidden}
 .desktopOnly{display:inline}
-.mobileOnly{display:none}
-@media (max-width: 1200px){.desktopOnly{display:none}.mobileOnly{display:inline}.meta{margin-top:6px}}
+.mobileOnly{display:none !important}
+@media (max-width: 1200px){.desktopOnly{display:none !important}.mobileOnly{display:inline !important}.meta{margin-top:6px}}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#000;color:#e5e7eb;margin:0;padding:10px 24px 10px;height:100vh;overflow:hidden}
 .wrap{max-width:920px;margin:0 auto;height:100%;display:flex;flex-direction:column}
 .mainBlock{max-width:520px;width:100%;margin:0 auto;height:100%;display:flex;flex-direction:column;justify-content:flex-start;position:relative;min-height:0}
@@ -16,10 +16,12 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .slide{height:100%;min-height:100%;overflow:hidden;scroll-snap-align:start;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center}
 .card{background:#000;border:none;border-radius:12px;padding:6px 16px 20px;max-width:520px;width:100%;box-shadow:0 14px 34px rgba(2,6,23,.45);display:grid;grid-template-rows:auto auto auto;row-gap:8px}
 .cardHead{display:flex;justify-content:space-between;gap:8px;flex-wrap:nowrap;align-items:center;min-height:18px;max-width:500px;width:100%;margin:0 auto 8px}
-.cardLeft{display:flex;align-items:center;gap:8px;min-width:0}
-.shareBtn{appearance:none;border:1px solid rgba(148,163,184,.28);background:rgba(15,23,42,.45);color:#cbd5e1;border-radius:999px;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer}
-.linkGlyph{line-height:1}
+.cardLeft{display:flex;align-items:center;gap:8px;min-width:0;position:relative}
+.shareBtn{appearance:none;border:1px solid rgba(148,163,184,.28);background:rgba(15,23,42,.45);color:#cbd5e1;border-radius:999px;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;position:relative}
+.linkGlyph{line-height:1;display:block}
 .shareBtn:hover{border-color:rgba(147,197,253,.55);color:#e2e8f0}
+.copyBubble{position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);background:rgba(2,6,23,.88);border:1px solid rgba(148,163,184,.28);color:#e5e7eb;padding:6px 10px;border-radius:999px;font-size:12px;white-space:nowrap;pointer-events:none;z-index:10;animation:copyPop 1.1s ease forwards}
+@keyframes copyPop{0%{opacity:0;transform:translateY(-50%) translateX(-2px)}10%{opacity:1;transform:translateY(-50%) translateX(0)}80%{opacity:1}100%{opacity:0}}
 .shareToast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(2,6,23,.85);border:1px solid rgba(148,163,184,.28);color:#e5e7eb;padding:8px 12px;border-radius:999px;font-size:12px;opacity:0;transition:opacity .2s ease;pointer-events:none;z-index:9999}
 .shareToast.show{opacity:1}
 .cardOriginal{color:#a7b4c8;font-size:12px;text-decoration:none;white-space:nowrap;flex:0 0 auto}

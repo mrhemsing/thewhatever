@@ -16,6 +16,8 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
   const jumpRowRef = useRef<HTMLDivElement | null>(null);
   const navLockRef = useRef(false);
   const [activeIdx, setActiveIdx] = useState(0);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+  const copyTimerRef = useRef<number | null>(null);
   const router = useRouter();
 
   const goTo = (idx: number) => {
@@ -174,18 +176,13 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
   }, [nextPageHref, prevPageHref, router]);
 
   useEffect(() => {
-    (window as any).__twShareToast = (ok: boolean) => {
-      const el = document.createElement('div');
-      el.className = `shareToast ${ok ? 'ok' : 'err'}`;
-      el.textContent = ok ? 'Link copied' : 'Copy failed';
-      document.body.appendChild(el);
-      window.setTimeout(() => el.classList.add('show'), 10);
-      window.setTimeout(() => {
-        el.classList.remove('show');
-        window.setTimeout(() => el.remove(), 250);
-      }, 1200);
+    // clear any pending copy bubble timer on unmount
+    return () => {
+      if (copyTimerRef.current) window.clearTimeout(copyTimerRef.current);
     };
+  }, []);
 
+  useEffect(() => {
     let startY = 0;
 
     const onTouchStart = (e: TouchEvent) => {
@@ -237,6 +234,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
             <article className="card">
               <header className="cardHead">
                 <div className="cardLeft">
+                  {copiedId === String(p.id) ? <span className="copyBubble" role="status">Link copied</span> : null}
                   <a className="cardPostLabel" href={`/post/${p.id}`}><span className="sideCountWord">Post</span> <span className="sideCountNum">{Math.min(totalPosts, pageOffset + activeIdx + 1)}/{totalPosts}</span></a>
                   <button
                     type="button"
@@ -247,13 +245,21 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                       const url = `${location.origin}/post/${p.id}`;
                       try {
                         await navigator.clipboard.writeText(url);
-                        (window as any).__twShareToast?.(true);
+                        setCopiedId(String(p.id));
+                        if (copyTimerRef.current) window.clearTimeout(copyTimerRef.current);
+                        copyTimerRef.current = window.setTimeout(() => setCopiedId(null), 1100);
                       } catch {
-                        (window as any).__twShareToast?.(false);
+                        // ignore
                       }
                     }}
                   >
-                    <span className="linkGlyph">🔗</span>
+                    <span className="desktopOnly">
+                      <svg className="linkGlyph" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                        <path d="M10 13a5 5 0 0 1 0-7l1.5-1.5a5 5 0 0 1 7 7L17 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M14 11a5 5 0 0 1 0 7L12.5 19.5a5 5 0 0 1-7-7L7 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                    <span className="mobileOnly linkGlyph" aria-hidden>🔗</span>
                   </button>
                 </div>
                 {/* removed original link */}
