@@ -135,7 +135,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       <div className="mobileIntro" aria-hidden>
         <div className="mobileBrand">THE WHATEVER</div>
         <div className="mobileTop">Your First Stop to a Shameful Browser History</div>
-        <div className="mobileBottom">A collection of posts from April 21, 2009 to November 18, 2015.</div>
+        <div className="mobileBottom">A collection of posts from 04/21/09 to 11/18/15.</div>
       </div>
       <div className="scroller" ref={scrollerRef}>
         {visiblePosts.map((p, i) => (
