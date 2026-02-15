@@ -143,6 +143,18 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
   }, [nextPageHref, prevPageHref, router]);
 
   useEffect(() => {
+    (window as any).__twShareToast = (ok: boolean) => {
+      const el = document.createElement('div');
+      el.className = `shareToast ${ok ? 'ok' : 'err'}`;
+      el.textContent = ok ? 'Link copied' : 'Copy failed';
+      document.body.appendChild(el);
+      window.setTimeout(() => el.classList.add('show'), 10);
+      window.setTimeout(() => {
+        el.classList.remove('show');
+        window.setTimeout(() => el.remove(), 250);
+      }, 1200);
+    };
+
     let startY = 0;
 
     const onTouchStart = (e: TouchEvent) => {
@@ -193,7 +205,30 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
           <section key={p.id} className="slide" ref={(el) => { slidesRef.current[i] = el; }}>
             <article className="card">
               <header className="cardHead">
-                <a className="cardPostLabel" href={`/post/${p.id}`}><span className="sideCountWord">Post</span> <span className="sideCountNum">{Math.min(totalPosts, pageOffset + activeIdx + 1)}/{totalPosts}</span></a>
+                <div className="cardLeft">
+                  <a className="cardPostLabel" href={`/post/${p.id}`}><span className="sideCountWord">Post</span> <span className="sideCountNum">{Math.min(totalPosts, pageOffset + activeIdx + 1)}/{totalPosts}</span></a>
+                  <button
+                    type="button"
+                    className="shareBtn"
+                    onClick={async () => {
+                      const url = `${location.origin}/post/${p.id}`;
+                      try {
+                        if (navigator.share) {
+                          await navigator.share({ url });
+                          return;
+                        }
+                      } catch {}
+                      try {
+                        await navigator.clipboard.writeText(url);
+                        (window as any).__twShareToast?.(true);
+                      } catch {
+                        (window as any).__twShareToast?.(false);
+                      }
+                    }}
+                  >
+                    Share
+                  </button>
+                </div>
                 <a className="cardOriginal" href={p.url} target="_blank" rel="noopener noreferrer">Original ↗</a>
                 <div className="meta">
                   <span>{p.date}</span>
