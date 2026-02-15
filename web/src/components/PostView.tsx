@@ -17,7 +17,7 @@ function shortDate(s?: string) {
   return mm ? `${mm}/${day}/${year}` : raw;
 }
 
-export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHref, prevPageHref }: { posts: TumblrPost[]; totalPosts: number; pageOffset?: number; nextPageHref?: string | null; prevPageHref?: string | null }) {
+export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHref, prevPageHref, initialPostId }: { posts: TumblrPost[]; totalPosts: number; pageOffset?: number; nextPageHref?: string | null; prevPageHref?: string | null; initialPostId?: string | null }) {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const slidesRef = useRef<Array<HTMLElement | null>>([]);
   const jumpRowRef = useRef<HTMLDivElement | null>(null);
@@ -80,6 +80,21 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
   useEffect(() => {
     const s = scrollerRef.current;
     if (!s) return;
+
+    // For /post/[id] route: jump to the post within the surrounding page slice.
+    if (initialPostId) {
+      const idx = visiblePosts.findIndex((p) => String(p.id) === String(initialPostId));
+      if (idx >= 0) {
+        requestAnimationFrame(() => {
+          const el = slidesRef.current[idx];
+          if (!el) return;
+          s.scrollTop = el.offsetTop;
+          setActiveIdx(idx);
+        });
+        return;
+      }
+    }
+
     try {
       if (sessionStorage.getItem('thewhatever-scroll-target') === 'last') {
         sessionStorage.removeItem('thewhatever-scroll-target');
@@ -89,7 +104,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
         });
       }
     } catch {}
-  }, [visiblePosts.length]);
+  }, [initialPostId, visiblePosts]);
 
   useEffect(() => {
     const s = scrollerRef.current;
