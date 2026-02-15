@@ -248,14 +248,10 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                   <button
                     type="button"
                     className="shareBtn"
+                    aria-label="Copy link"
+                    title="Copy link"
                     onClick={async () => {
                       const url = `${location.origin}/post/${p.id}`;
-                      try {
-                        if (navigator.share) {
-                          await navigator.share({ url });
-                          return;
-                        }
-                      } catch {}
                       try {
                         await navigator.clipboard.writeText(url);
                         (window as any).__twShareToast?.(true);
@@ -264,7 +260,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                       }
                     }}
                   >
-                    Share
+                    🔗
                   </button>
                 </div>
                 {/* removed original link */}
