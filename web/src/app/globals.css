@@ -1,3 +1,5 @@
+*{box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#000;color:#e5e7eb;margin:0;padding:24px;height:100vh;overflow:hidden}
 .wrap{max-width:920px;margin:0 auto;height:100%;display:flex;flex-direction:column}
 .mainBlock{max-width:520px;width:100%;margin:0 auto;height:100%;display:flex;flex-direction:column;justify-content:flex-start;position:relative;min-height:0}
@@ -73,7 +75,9 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 }
 
 @media (max-width: 1200px){
+  html,body{overflow-x:hidden}
   body{height:100dvh;overflow-y:hidden;overflow-x:hidden;padding:16px 16px calc(12px + env(safe-area-inset-bottom))}
+  .wrap,.mainBlock,.scroller,.slide,.card,.jumpWrap,.jumpRow{max-width:100%}
   .wrap,.mainBlock{height:100%;min-height:0}
   .mainBlock{display:flex;flex-direction:column;justify-content:flex-start}
   .sideMeta{display:none}
