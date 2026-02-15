@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "archive": "node scripts/export-tumblr.mjs"
+    "archive": "node scripts/export-tumblr.mjs",
+    "mirror:r2": "node scripts/mirror-media-to-r2.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.859.0"
   }
 }

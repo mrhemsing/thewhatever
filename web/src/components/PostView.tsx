@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { TumblrPost } from '@/lib/posts';
 
-export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHref }: { posts: TumblrPost[]; totalPosts: number; pageOffset?: number; nextPageHref?: string | null }) {
+export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHref, prevPageHref }: { posts: TumblrPost[]; totalPosts: number; pageOffset?: number; nextPageHref?: string | null; prevPageHref?: string | null }) {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const slidesRef = useRef<Array<HTMLElement | null>>([]);
   const jumpRowRef = useRef<HTMLDivElement | null>(null);
@@ -67,6 +67,20 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
   useEffect(() => {
     const s = scrollerRef.current;
     if (!s) return;
+    try {
+      if (sessionStorage.getItem('thewhatever-scroll-target') === 'last') {
+        sessionStorage.removeItem('thewhatever-scroll-target');
+        requestAnimationFrame(() => {
+          s.scrollTop = s.scrollHeight;
+          setActiveIdx(Math.max(0, visiblePosts.length - 1));
+        });
+      }
+    } catch {}
+  }, [visiblePosts.length]);
+
+  useEffect(() => {
+    const s = scrollerRef.current;
+    if (!s) return;
 
     const onScroll = () => {
       const top = s.scrollTop;
@@ -104,7 +118,16 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       const t = e.target as HTMLElement | null;
       if (t?.closest('.jumpRow')) return;
 
+      const atTop = s.scrollTop <= 2;
       const atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 2;
+
+      if (e.deltaY < 0 && atTop && prevPageHref && !navLockRef.current) {
+        navLockRef.current = true;
+        try { sessionStorage.setItem('thewhatever-scroll-target', 'last'); } catch {}
+        router.push(prevPageHref);
+        return;
+      }
+
       if (e.deltaY > 0 && atBottom && nextPageHref && !navLockRef.current) {
         navLockRef.current = true;
         router.push(nextPageHref);
@@ -117,7 +140,35 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
 
     window.addEventListener('wheel', onWheel, { passive: false });
     return () => window.removeEventListener('wheel', onWheel);
-  }, [nextPageHref, router]);
+  }, [nextPageHref, prevPageHref, router]);
+
+  useEffect(() => {
+    let startY = 0;
+
+    const onTouchStart = (e: TouchEvent) => {
+      startY = e.touches[0]?.clientY ?? 0;
+    };
+
+    const onTouchEnd = (e: TouchEvent) => {
+      const s = scrollerRef.current;
+      if (!s || navLockRef.current) return;
+      const endY = e.changedTouches[0]?.clientY ?? startY;
+      const dy = endY - startY;
+      const atTop = s.scrollTop <= 2;
+      if (dy > 45 && atTop && prevPageHref) {
+        navLockRef.current = true;
+        try { sessionStorage.setItem('thewhatever-scroll-target', 'last'); } catch {}
+        router.push(prevPageHref);
+      }
+    };
+
+    window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchend', onTouchEnd, { passive: true });
+    return () => {
+      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchend', onTouchEnd);
+    };
+  }, [prevPageHref, router]);
 
   return (
     <>
@@ -135,7 +186,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       <div className="mobileIntro" aria-hidden>
         <a className="mobileBrand" href="/">THE WHATEVER</a>
         <div className="mobileTop">Your First Stop to a Shameful Browser History</div>
-        <div className="mobileBottom">A collection of posts from 04/21/09 to 11/18/15.</div>
+        <div className="mobileBottom">A collection of <img className="mobileBottomIcon" src="/mobile-tumblr-icon.svg" alt="" /> posts from 04/21/09 to 11/18/15.</div>
       </div>
       <div className="scroller" ref={scrollerRef}>
         {visiblePosts.map((p, i) => (
@@ -145,7 +196,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                 <span className="cardPostLabel"><span className="sideCountWord">Post</span> <span className="sideCountNum">{Math.min(totalPosts, pageOffset + activeIdx + 1)}/{totalPosts}</span></span>
                 <div className="meta">
                   <span>{p.date}</span>
-                  <span className="metaType"> · {p.type || 'post'}</span>
+                  {/* removed post type */}
                   {p['note-count'] ? <span>{` · ${p['note-count']} notes`}</span> : null}
                 </div>
               </header>
@@ -157,7 +208,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
           </section>
         ))}
       </div>
-      <div className="scrollHint" aria-hidden><span className="hintArrow">↑</span> SWIPE UP / DOWN <span className="hintArrow">↓</span></div>
+      <div className="scrollHint" aria-hidden><span className="hintArrow">‹</span> SCROLL <span className="hintArrow">›</span></div>
       <div className="jumpWrap">
         <div className="jumpRow" ref={jumpRowRef}>
           {thumbs.map((t, i) => (
