@@ -1,5 +1,8 @@
 *{box-sizing:border-box}
 html,body{max-width:100%;overflow-x:hidden}
+.desktopOnly{display:inline}
+.mobileOnly{display:none}
+@media (max-width: 1200px){.desktopOnly{display:none}.mobileOnly{display:inline}}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#000;color:#e5e7eb;margin:0;padding:10px 24px 10px;height:100vh;overflow:hidden}
 .wrap{max-width:920px;margin:0 auto;height:100%;display:flex;flex-direction:column}
 .mainBlock{max-width:520px;width:100%;margin:0 auto;height:100%;display:flex;flex-direction:column;justify-content:flex-start;position:relative;min-height:0}
@@ -20,6 +23,8 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .shareToast.show{opacity:1}
 .cardOriginal{color:#a7b4c8;font-size:12px;text-decoration:none;white-space:nowrap;flex:0 0 auto}
 .meta{color:#a7b4c8;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:4px}
+.metaDate{display:inline}
+@media (max-width: 1200px){.metaDate{display:inline}}
 .cardHead a{color:#a7b4c8;font-size:12px;text-decoration:none;white-space:nowrap;flex:0 0 auto}
 .cardPostLabel{display:inline-block;padding:4px 10px;border:1px solid #3f3f46;border-radius:4px;background:#2d4157;font-size:11px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;color:inherit;text-decoration:none}
 .mediaLink{display:block;text-decoration:none}
