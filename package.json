@@ -1,0 +1,9 @@
+{
+  "name": "thewhatever-archive",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "archive": "node scripts/export-tumblr.mjs"
+  }
+}
