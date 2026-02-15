@@ -19,6 +19,8 @@ export type TumblrPost = {
   'video-caption'?: string;
   'audio-caption'?: string;
   'link-description'?: string;
+  'video-player-500'?: string;
+  'video-player'?: string;
   'quote-source'?: string;
   'conversation-text'?: string;
   answer?: string;
