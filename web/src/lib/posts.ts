@@ -37,6 +37,14 @@ export async function getAllPosts(): Promise<TumblrPost[]> {
   const raw = await fs.readFile(p, 'utf8');
   const parsed: TumblrPost[] = JSON.parse(raw) || [];
 
+  // After the domain cutover to Vercel, many exported `url` values still point at
+  // `www.thewhatever.com`. Normalize original post URLs back to Tumblr.
+  for (const post of parsed) {
+    if (typeof post.url === 'string') {
+      post.url = post.url.replace(/^https?:\/\/(www\.)?thewhatever\.com\b/i, 'https://thewhatever.tumblr.com');
+    }
+  }
+
   const idx = parsed.findIndex((post) => String(post.id) === PINNED_FIRST_POST_ID);
   if (idx > 0) {
     const [pinned] = parsed.splice(idx, 1);
