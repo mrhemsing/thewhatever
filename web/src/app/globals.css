@@ -18,7 +18,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .cardHead{display:flex;justify-content:space-between;gap:8px;flex-wrap:nowrap;align-items:center;min-height:18px;max-width:500px;width:100%;margin:0 auto 8px}
 .cardLeft{display:flex;align-items:center;gap:8px;min-width:0}
 .shareBtn{appearance:none;border:1px solid rgba(148,163,184,.28);background:rgba(15,23,42,.45);color:#cbd5e1;border-radius:999px;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer}
-.linkGlyph{width:14px;height:14px;display:block}
+.linkGlyph{line-height:1}
 .shareBtn:hover{border-color:rgba(147,197,253,.55);color:#e2e8f0}
 .shareToast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(2,6,23,.85);border:1px solid rgba(148,163,184,.28);color:#e5e7eb;padding:8px 12px;border-radius:999px;font-size:12px;opacity:0;transition:opacity .2s ease;pointer-events:none;z-index:9999}
 .shareToast.show{opacity:1}
