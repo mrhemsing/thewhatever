@@ -95,6 +95,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
     const s = scrollerRef.current;
     if (!s) return;
 
+    let lastId = '';
     const onScroll = () => {
       const top = s.scrollTop;
       let best = 0;
@@ -109,6 +110,15 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
         }
       }
       setActiveIdx(best);
+
+      const p = visiblePosts[best];
+      const id = p?.id ? String(p.id) : '';
+      if (id && id !== lastId) {
+        lastId = id;
+        try {
+          window.history.replaceState({}, '', `/post/${id}`);
+        } catch {}
+      }
     };
 
     onScroll();
