@@ -253,7 +253,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                       }
                     }}
                   >
-                    <span className="mobileOnly">🔗</span><span className="desktopOnly">Link</span>
+                    <span className="linkGlyph">🔗</span>
                   </button>
                 </div>
                 {/* removed original link */}
