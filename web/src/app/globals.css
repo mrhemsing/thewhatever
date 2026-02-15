@@ -75,13 +75,14 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 }
 
 @media (max-width: 1200px){
-  html,body{overflow-x:hidden}
-  body{height:100dvh;overflow-y:hidden;overflow-x:hidden;padding:16px 16px calc(12px + env(safe-area-inset-bottom))}
+  html,body{overflow-x:hidden !important;overscroll-behavior-x:none;width:100%}
+  body{position:fixed;left:0;right:0;top:0;bottom:0;height:100dvh;overflow-y:hidden;overflow-x:hidden;padding:16px 16px calc(12px + env(safe-area-inset-bottom))}
   .wrap,.mainBlock,.scroller,.slide,.card,.jumpWrap,.jumpRow{max-width:100%}
-  .wrap{width:100%;overflow-x:clip}
+  .wrap{width:100%;overflow-x:clip;transform:none !important}
   .wrap,.mainBlock{height:100%;min-height:0}
-  .scroller{overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
-  .slide,.card{width:100%}
+  .mainBlock{margin-left:auto;margin-right:auto;transform:none !important}
+  .scroller{overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y;transform:none !important}
+  .slide,.card{width:100%;transform:none !important}
   .mainBlock{display:flex;flex-direction:column;justify-content:flex-start}
   .sideMeta{display:none}
   .mobileIntro{display:block;margin:0 0 8px}
