@@ -74,7 +74,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .mobileIntro{display:none}
 .mobileTopRow{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .mobileBrand{color:#fff;font-size:34px;line-height:1.02;font-weight:800;letter-spacing:.01em;text-decoration:none;display:inline-block}
-.mobileHamburger{appearance:none;border:1px solid rgba(148,163,184,.35);background:rgba(15,23,42,.6);color:#e2e8f0;border-radius:10px;width:36px;height:32px;display:inline-flex;align-items:center;justify-content:center;font-size:18px;line-height:1;cursor:pointer}
+.mobileHamburger{appearance:none;border:1px solid rgba(148,163,184,.35);background:rgba(15,23,42,.6);color:#cbd5e1;border-radius:10px;width:36px;height:32px;display:inline-flex;align-items:center;justify-content:center;font-size:18px;line-height:1;cursor:pointer}
 .mobileMenu{margin-top:8px;padding:8px 10px;border:1px solid rgba(148,163,184,.28);border-radius:10px;background:rgba(15,23,42,.6)}
 .mobileMenu a{color:#cbd5e1;text-decoration:underline;font-size:14px}
 .mobileTop{margin-top:8px;color:#cbd5e1;font-size:16px;line-height:1.28;font-weight:600}
