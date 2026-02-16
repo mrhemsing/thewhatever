@@ -256,11 +256,11 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
         <div className="sideTop">Your First Stop to a Shameful Browser History</div>
         <img className="sidePhoto" src="/sidebar-queen.jpg" alt="" />
         <div className="sideBottom sideBottomTight">A collection of posts from April 21, 2009 to November 18, 2015.</div>
-        <div className="sideBottom desktopOnly"><a href="https://www.b-average.com/" target="_blank" rel="noopener noreferrer">B Average</a></div>
         <div className="sideSeen">
           <div className="sideSeenLabel">AS SEEN ON:</div>
           <img className="sideTumblr" src="https://upload.wikimedia.org/wikipedia/commons/4/43/Tumblr.svg" alt="Tumblr" />
         </div>
+        <div className="sideBottom desktopOnly"><a href="https://www.b-average.com/" target="_blank" rel="noopener noreferrer">B Average</a></div>
         {/* moved post label to card header */}
       </aside>
       <div className="mobileIntro">
