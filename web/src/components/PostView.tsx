@@ -17,6 +17,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
   const navLockRef = useRef(false);
   const [activeIdx, setActiveIdx] = useState(0);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const copyTimerRef = useRef<number | null>(null);
   const router = useRouter();
 
@@ -171,8 +172,46 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       e.preventDefault();
     };
 
+    const onKeyDown = (e: KeyboardEvent) => {
+      const s = scrollerRef.current;
+      if (!s || navLockRef.current) return;
+
+      const target = e.target as HTMLElement | null;
+      const tag = target?.tagName?.toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || target?.isContentEditable) return;
+
+      const atTop = s.scrollTop <= 2;
+      const atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 2;
+
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (atTop && prevPageHref) {
+          navLockRef.current = true;
+          try { sessionStorage.setItem('thewhatever-scroll-target', 'last'); } catch {}
+          router.push(prevPageHref);
+          return;
+        }
+        s.scrollBy({ top: -92, behavior: 'smooth' });
+        return;
+      }
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (atBottom && nextPageHref) {
+          navLockRef.current = true;
+          router.push(nextPageHref);
+          return;
+        }
+        s.scrollBy({ top: 92, behavior: 'smooth' });
+      }
+    };
+
     window.addEventListener('wheel', onWheel, { passive: false });
-    return () => window.removeEventListener('wheel', onWheel);
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('wheel', onWheel);
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, [nextPageHref, prevPageHref, router]);
 
   useEffect(() => {
@@ -216,15 +255,32 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
         <a className="sideBrand" href="/">THE WHATEVER</a>
         <div className="sideTop">Your First Stop to a Shameful Browser History</div>
         <img className="sidePhoto" src="/sidebar-queen.jpg" alt="" />
-        <div className="sideBottom">A collection of posts from April 21, 2009 to November 18, 2015.</div>
+        <div className="sideBottom sideBottomTight">A collection of posts from April 21, 2009 to November 18, 2015.</div>
+        <div className="sideBottom desktopOnly"><a href="https://www.b-average.com/" target="_blank" rel="noopener noreferrer">B Average</a></div>
         <div className="sideSeen">
           <div className="sideSeenLabel">AS SEEN ON:</div>
           <img className="sideTumblr" src="https://upload.wikimedia.org/wikipedia/commons/4/43/Tumblr.svg" alt="Tumblr" />
         </div>
         {/* moved post label to card header */}
       </aside>
-      <div className="mobileIntro" aria-hidden>
-        <a className="mobileBrand" href="/">THE WHATEVER</a>
+      <div className="mobileIntro">
+        <div className="mobileTopRow">
+          <a className="mobileBrand" href="/">THE WHATEVER</a>
+          <button
+            type="button"
+            className="mobileHamburger"
+            aria-label="Open menu"
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen((v) => !v)}
+          >
+            ☰
+          </button>
+        </div>
+        {mobileMenuOpen ? (
+          <div className="mobileMenu">
+            <a href="https://www.b-average.com/" target="_blank" rel="noopener noreferrer">Contact</a>
+          </div>
+        ) : null}
         <div className="mobileTop">Your First Stop to a Shameful Browser History</div>
         <div className="mobileBottom">A collection of <img className="mobileBottomIcon" src="/mobile-tumblr-icon.svg" alt="" /> posts from 04/21/09 to 11/18/15.</div>
       </div>
