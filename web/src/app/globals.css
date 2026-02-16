@@ -62,7 +62,8 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .sideTop{font-size:16px;line-height:1.2;font-weight:600;letter-spacing:.01em}
 .sideBottom{padding-top:22px;padding-bottom:24px}
 .sideBottomTight{padding-bottom:0}
-.sideBottom a{color:#94a3b8;text-decoration:underline}
+.sideBottom a{color:#94a3b8;text-decoration:none;transition:color .16s ease,text-decoration-color .16s ease}
+.sideBottom a:hover{color:#cbd5e1;text-decoration:underline}
 .sidePhoto{width:100%;height:auto;display:block;margin-top:12px}
 .sideSeen{margin-top:auto;padding:0 16px 0}
 .sideSeenLabel{font-size:10px;letter-spacing:.12em;color:#9ca3af;margin-bottom:6px}
