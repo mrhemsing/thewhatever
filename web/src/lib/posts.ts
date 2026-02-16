@@ -30,12 +30,21 @@ export type TumblrPost = {
 
 let cache: TumblrPost[] | null = null;
 const PINNED_FIRST_POST_ID = '132885927778';
+const HIDDEN_POST_IDS = new Set<string>([
+  '21941351864',
+  '131207074',
+  '130989012',
+  '133427163968',
+  '133425401353',
+  '129054910713',
+]);
 
 export async function getAllPosts(): Promise<TumblrPost[]> {
   if (cache) return cache;
   const p = path.resolve(process.cwd(), '..', 'archive', 'posts.json');
   const raw = await fs.readFile(p, 'utf8');
-  const parsed: TumblrPost[] = JSON.parse(raw) || [];
+  const parsed0: TumblrPost[] = JSON.parse(raw) || [];
+  const parsed: TumblrPost[] = parsed0.filter((p) => !HIDDEN_POST_IDS.has(String(p.id)));
 
   // After the domain cutover to Vercel, many exported `url` values still point at
   // `www.thewhatever.com`. Normalize original post URLs back to Tumblr.
