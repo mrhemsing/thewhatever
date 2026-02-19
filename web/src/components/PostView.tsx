@@ -325,9 +325,9 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
                   {p['note-count'] ? <span>{` · ${p['note-count']} notes`}</span> : null}
                 </div>
               </header>
-              <a href={p.url} target="_blank" rel="noopener noreferrer" className="mediaLink">
+              <div className="mediaLink">
                 <div suppressHydrationWarning className="media" dangerouslySetInnerHTML={{ __html: mediaHtmlFor(p) }} />
-              </a>
+              </div>
               <div suppressHydrationWarning className="caption" dangerouslySetInnerHTML={{ __html: captionHtmlFor(p) }} />
             </article>
           </section>
