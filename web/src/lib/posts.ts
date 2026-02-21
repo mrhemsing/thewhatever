@@ -40,6 +40,7 @@ const HIDDEN_POST_IDS = new Set<string>([
   '48962062332',
   '55745608283',
   '90855799348',
+  '70612824485',
 ]);
 
 export async function getAllPosts(): Promise<TumblrPost[]> {
