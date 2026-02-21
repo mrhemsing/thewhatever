@@ -254,7 +254,6 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       <aside className="sideMeta" aria-hidden>
         <a className="sideBrand" href="/">THE WHATEVER</a>
         <div className="sideTop">Your First Stop to a Shameful Browser History</div>
-        <img className="sidePhoto" src="/sidebar-queen.jpg" alt="" />
         <div className="sideBottom sideBottomTight">A collection of posts from April 21, 2009 to November 18, 2015.</div>
         <div className="sideSeen">
           <div className="sideSeenLabel">AS SEEN ON:</div>
