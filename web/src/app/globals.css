@@ -81,6 +81,9 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .mobileTop{margin-top:8px;color:#cbd5e1;font-size:16px;line-height:1.28;font-weight:600}
 .mobileBottom{margin-top:10px;color:#cbd5e1;font-size:14px;line-height:1.4;display:flex;align-items:center;gap:8px}
 .mobileBottomIcon{width:20px;height:20px;flex:0 0 20px;border-radius:4px}
+.cardHeadTop{display:none}
+.cardHeadBottom{display:flex}
+
 .scrollHint{position:absolute;right:-42px;top:46%;transform:translateY(calc(-50% - 100px));writing-mode:vertical-rl;text-orientation:mixed;font-size:11px;letter-spacing:.12em;color:#b6beca;pointer-events:none;user-select:none;animation:hintFlash 1s ease-in-out 0s 1, hintPulse 1.8s ease-in-out 1.2s 2, hintFade 0.6s ease 5.5s 1 forwards}
 .desktopHint{display:inline}
 .mobileHint{display:none}
