@@ -115,7 +115,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   .mainBlock{margin-left:auto;margin-right:auto;transform:none !important;border:none;padding:0;border-radius:0}
   .scroller{overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y;transform:none !important}
   .slide,.card{width:100%;transform:none !important}
-  .mainBlock{display:flex;flex-direction:column;justify-content:flex-start}
+  .mainBlock{display:flex;flex-direction:column;justify-content:flex-start;padding-top:clamp(10px,2.8vh,26px)}
   .sideMeta{display:none}
   .mobileIntro{display:block;margin:0 0 8px}
   .metaType{display:none}
