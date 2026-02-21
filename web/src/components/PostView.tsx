@@ -234,10 +234,18 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       const endY = e.changedTouches[0]?.clientY ?? startY;
       const dy = endY - startY;
       const atTop = s.scrollTop <= 2;
+      const atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 2;
+
       if (dy > 45 && atTop && prevPageHref) {
         navLockRef.current = true;
         try { sessionStorage.setItem('thewhatever-scroll-target', 'last'); } catch {}
         router.push(prevPageHref);
+        return;
+      }
+
+      if (dy < -45 && atBottom && nextPageHref) {
+        navLockRef.current = true;
+        router.push(nextPageHref);
       }
     };
 
@@ -247,7 +255,7 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       window.removeEventListener('touchstart', onTouchStart);
       window.removeEventListener('touchend', onTouchEnd);
     };
-  }, [prevPageHref, router]);
+  }, [nextPageHref, prevPageHref, router]);
 
   return (
     <>
