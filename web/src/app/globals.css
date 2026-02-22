@@ -139,7 +139,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   .scroller{height:72vh}
   .card{padding:11px 10px 12px;grid-template-rows:auto 375px auto}
   .media{height:375px}
-  .caption{min-height:100px;max-height:120px;overflow-y:auto}
+  .caption{min-height:100px;max-height:none;overflow:visible}
   .postCounter{margin:5px 0}
   .jumpWrap{margin:40px 0 0;position:relative;top:14px}
   .pager{padding:10px 0 8px}
