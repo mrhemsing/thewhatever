@@ -135,11 +135,11 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   .intro h1{font-size:26px;margin-bottom:5px}
   .intro h2{font-size:17px;margin-bottom:8px}
   .sub{margin-bottom:7px}
-  .slide{align-items:flex-start}
-  .scroller{height:70vh}
-  .card{padding:11px 10px 12px;grid-template-rows:auto 375px 100px}
+  .slide{align-items:flex-start;overflow:visible}
+  .scroller{height:72vh}
+  .card{padding:11px 10px 12px;grid-template-rows:auto 375px auto}
   .media{height:375px}
-  .caption{min-height:100px;max-height:100px}
+  .caption{min-height:100px;max-height:120px;overflow-y:auto}
   .postCounter{margin:5px 0}
   .jumpWrap{margin:40px 0 0;position:relative;top:14px}
   .pager{padding:10px 0 8px}
