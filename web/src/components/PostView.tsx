@@ -152,8 +152,8 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       const t = e.target as HTMLElement | null;
       if (t?.closest('.jumpRow')) return;
 
-      const atTop = s.scrollTop <= 2;
-      const atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 2;
+      const atTop = s.scrollTop <= 24;
+      const atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 24;
 
       if (e.deltaY < 0 && atTop && prevPageHref && !navLockRef.current) {
         navLockRef.current = true;
@@ -180,8 +180,8 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       const tag = target?.tagName?.toLowerCase();
       if (tag === 'input' || tag === 'textarea' || target?.isContentEditable) return;
 
-      const atTop = s.scrollTop <= 2;
-      const atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 2;
+      const atTop = s.scrollTop <= 24;
+      const atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 24;
 
       if (e.key === 'ArrowUp') {
         e.preventDefault();
@@ -233,8 +233,8 @@ export default function PostView({ posts, totalPosts, pageOffset = 0, nextPageHr
       if (!s || navLockRef.current) return;
       const endY = e.changedTouches[0]?.clientY ?? startY;
       const dy = endY - startY;
-      const atTop = s.scrollTop <= 2;
-      const atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 2;
+      const atTop = s.scrollTop <= 24;
+      const atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 24;
 
       if (dy > 45 && atTop && prevPageHref) {
         navLockRef.current = true;
