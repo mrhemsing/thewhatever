@@ -8,9 +8,10 @@ html,body{max-width:100%;overflow-x:hidden}
 .holdingImage{display:block;width:min(100%,500px);height:auto;margin:0 auto 20px;border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.35)}
 .holdingCard h1{margin:0 0 14px;font-size:clamp(24px,3.2vw,36px);line-height:1.06;color:#fff}
 .holdingCopy{margin:0 auto 22px;max-width:560px;color:#cbd5e1;font-size:18px;line-height:1.5}
-.holdingButton{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:999px;background:#fff;color:#111827;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(255,255,255,.12)}
+.holdingButton{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding:14px 20px;border-radius:999px;background:#fff;color:#111827;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(255,255,255,.12)}
 .xLogo{font-size:20px;line-height:1}
 .holdingButton:hover{transform:translateY(-1px)}
+@media (max-width: 640px){.holdingCard h1{font-size:clamp(20px,6vw,24px)}}
 @media (max-width: 1200px){.desktopOnly{display:none !important}.mobileOnly{display:inline !important}.meta{margin-top:6px}}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#000;color:#e5e7eb;margin:0;padding:12px 24px 10px;height:100vh;overflow:hidden}
 .wrap{max-width:920px;margin:0 auto;height:100%;display:flex;flex-direction:column}
