@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Whatever - Your First Stop to a Shameful Browser History",
-  description: "A collection of posts from April 21, 2009 to November 18, 2015.",
+  title: "The Whatever",
+  description: "Follow @thewhatever on X for the best of The Whatever.",
 };
 
 export default function RootLayout({
