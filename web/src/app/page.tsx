@@ -9,9 +9,6 @@ export default function Home() {
           alt="The Whatever preview"
         />
         <h1>We&apos;re posting on X right now.</h1>
-        <p className="holdingCopy">
-          Follow <strong>@thewhatever</strong> for the best of The Whatever.
-        </p>
         <a
           className="holdingButton"
           href="https://x.com/thewhatever"
