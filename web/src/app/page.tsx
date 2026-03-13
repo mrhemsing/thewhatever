@@ -2,7 +2,6 @@ export default function Home() {
   return (
     <main className="holdingWrap">
       <section className="holdingCard">
-        <div className="holdingEyebrow">thewhatever</div>
         <img
           className="holdingImage"
           src="https://64.media.tumblr.com/420261ac2ab7f1f25b6293134b079477/tumblr_nxkc8pSib01qzbs6po1_500.jpg"
