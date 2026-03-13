@@ -5,9 +5,11 @@ html,body{max-width:100%;overflow-x:hidden}
 .holdingWrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
 .holdingCard{max-width:720px;width:100%;padding:40px 32px;border:1px solid rgba(148,163,184,.18);border-radius:20px;background:rgba(15,23,42,.55);box-shadow:0 20px 60px rgba(0,0,0,.35);text-align:center}
 .holdingEyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#94a3b8;margin-bottom:16px}
+.holdingImage{display:block;width:min(100%,500px);height:auto;margin:0 auto 20px;border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.35)}
 .holdingCard h1{margin:0 0 14px;font-size:clamp(30px,5vw,52px);line-height:1.02;color:#fff}
 .holdingCopy{margin:0 auto 22px;max-width:560px;color:#cbd5e1;font-size:18px;line-height:1.5}
-.holdingButton{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;background:#fff;color:#111827;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(255,255,255,.12)}
+.holdingButton{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:999px;background:#fff;color:#111827;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(255,255,255,.12)}
+.xLogo{font-size:20px;line-height:1}
 .holdingButton:hover{transform:translateY(-1px)}
 @media (max-width: 1200px){.desktopOnly{display:none !important}.mobileOnly{display:inline !important}.meta{margin-top:6px}}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#000;color:#e5e7eb;margin:0;padding:12px 24px 10px;height:100vh;overflow:hidden}
