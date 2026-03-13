@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "archive": "node scripts/export-tumblr.mjs",
-    "mirror:r2": "node scripts/mirror-media-to-r2.mjs"
+    "mirror:r2": "node scripts/mirror-media-to-r2.mjs",
+    "x:review": "node scripts/build-x-review-batch.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.859.0"
