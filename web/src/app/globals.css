@@ -2,7 +2,7 @@
 html,body{max-width:100%;overflow-x:hidden}
 .desktopOnly{display:inline}
 .mobileOnly{display:none !important}
-.holdingWrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.holdingWrap{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:48px 24px 24px}
 .holdingCard{max-width:720px;width:100%;padding:40px 32px;border:1px solid rgba(148,163,184,.18);border-radius:20px;background:rgba(15,23,42,.55);box-shadow:0 20px 60px rgba(0,0,0,.35);text-align:center}
 .holdingEyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#94a3b8;margin-bottom:16px}
 .holdingImage{display:block;width:min(100%,500px);height:auto;margin:0 auto 20px;border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.35)}
