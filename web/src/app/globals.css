@@ -162,11 +162,12 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .queueSub{margin:8px 0 0;color:#94a3b8;max-width:720px;line-height:1.45}
 .queueStat{padding:10px 14px;border-radius:999px;background:rgba(15,23,42,.6);border:1px solid rgba(148,163,184,.22);color:#e2e8f0;font-weight:700;white-space:nowrap}
 .queueColumns{display:block}
+.queueColumnsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .queueColumn{border:1px solid rgba(148,163,184,.18);border-radius:18px;background:rgba(15,23,42,.38);padding:18px}
 .queueColumnHead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
 .queueColumnHead h2{margin:0;font-size:20px;color:#fff}
 .queueColumnHead span{color:#94a3b8;font-size:14px}
-.queueGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.queueGrid{display:grid;grid-template-columns:1fr;gap:16px}
 .queueCard{overflow:hidden;border:1px solid rgba(148,163,184,.16);border-radius:16px;background:#090f1a;display:flex;flex-direction:column}
 .queueImage{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#000}
 .queueBody{padding:14px;display:flex;flex-direction:column;gap:12px}
@@ -176,7 +177,9 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .queueCaption{margin:0;color:#f8fafc;font-size:18px;line-height:1.4;white-space:pre-line}
 .queueMetaBlock{display:grid;gap:5px;color:#cbd5e1;font-size:13px;line-height:1.4}
 .queueActions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.queueActions form{margin:0}
 .queueLink,.queueButton{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 12px;border-radius:999px;border:1px solid rgba(148,163,184,.24);background:rgba(15,23,42,.6);color:#e2e8f0;text-decoration:none;font-size:13px;font-weight:700}
-.queueButton{cursor:not-allowed;opacity:.55}
+.queueButton{cursor:pointer;opacity:1}
 .queueButton.ghost{background:transparent;color:#94a3b8}
+@media (max-width: 1100px){.queueColumnsGrid{grid-template-columns:1fr}}
 @media (max-width: 700px){.queueWrap{padding:20px 14px 32px}.queueTopbar{flex-direction:column;align-items:flex-start}.queueTopbar h1{font-size:30px}.queueGrid{grid-template-columns:1fr}}
