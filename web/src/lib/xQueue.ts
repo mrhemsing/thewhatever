@@ -34,9 +34,100 @@ type QueueStateFile = {
   items: QueueItem[];
 };
 
+type TumblrPost = {
+  id: string | number;
+  type?: string;
+  url?: string;
+  slug?: string;
+  date?: string;
+  tags?: string[];
+  photos?: Array<Record<string, string>>;
+  ['unix-timestamp']?: number;
+  ['note-count']?: string | number;
+  ['photo-caption']?: string;
+  ['video-caption']?: string;
+  ['photo-url-500']?: string;
+  ['video-player-500']?: string;
+};
+
 const dataDir = path.join(process.cwd(), '..', 'data');
 const reviewPath = path.join(dataDir, 'x-review-queue.json');
 const statePath = path.join(dataDir, 'x-queue-state.json');
+const archivePath = path.join(process.cwd(), '..', 'archive', 'posts.json');
+
+function stripHtml(html = '') {
+  return html
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/p>/gi, '\n')
+    .replace(/<\/blockquote>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#39;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/�/g, "'")
+    .replace(/\r/g, '')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .join('\n')
+    .trim();
+}
+
+function getImageUrl(post: TumblrPost) {
+  if (post['photo-url-500']) return post['photo-url-500'];
+  if (Array.isArray(post.photos) && post.photos[0]) {
+    return post.photos[0]['photo-url-500'] || post.photos[0]['photo-url-1280'] || null;
+  }
+  const player500 = post['video-player-500'] || '';
+  const posterMatch = player500.match(/poster='([^']+)'/) || player500.match(/poster="([^"]+)"/);
+  return posterMatch?.[1] || null;
+}
+
+function getCaption(post: TumblrPost) {
+  const raw = post['photo-caption'] || post['video-caption'] || '';
+  return stripHtml(raw);
+}
+
+function getSourceType(post: TumblrPost) {
+  if (post.type === 'photo') return 'image';
+  if (post.type === 'video') return 'video-still';
+  return post.type || 'unknown';
+}
+
+async function readArchiveCandidates(): Promise<QueueItem[]> {
+  const raw = await fs.readFile(archivePath, 'utf8');
+  const posts = JSON.parse(raw) as TumblrPost[];
+  return posts
+    .map((post) => {
+      const caption = getCaption(post);
+      const imageUrl = getImageUrl(post);
+      if (!caption || !imageUrl || !post.url || !post.date) return null;
+      return {
+        order: 0,
+        id: String(post.id),
+        sourceType: getSourceType(post),
+        postUrl: post.url,
+        slug: post.slug || '',
+        date: post.date,
+        unixTimestamp: post['unix-timestamp'] || null,
+        imageUrl,
+        caption,
+        captionLength: caption.length,
+        noteCount: Number.parseInt(String(post['note-count'] || '0'), 10) || 0,
+        tags: Array.isArray(post.tags) ? post.tags : [],
+        reviewStatus: 'inbox' as QueueStatus,
+        skipReason: null,
+        approvedText: null,
+        platformNotes: [],
+        importedAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      } satisfies QueueItem;
+    })
+    .filter(Boolean) as QueueItem[];
+}
 
 async function readReviewCandidates(): Promise<QueueItem[]> {
   const raw = await fs.readFile(reviewPath, 'utf8');
@@ -49,6 +140,16 @@ async function readReviewCandidates(): Promise<QueueItem[]> {
   }));
 }
 
+function sortAndRenumber(items: QueueItem[]) {
+  return items
+    .slice()
+    .sort((a, b) => {
+      if ((b.noteCount || 0) !== (a.noteCount || 0)) return (b.noteCount || 0) - (a.noteCount || 0);
+      return (b.unixTimestamp || 0) - (a.unixTimestamp || 0);
+    })
+    .map((item, index) => ({ ...item, order: index + 1 }));
+}
+
 export async function loadQueueState(): Promise<QueueStateFile> {
   try {
     const raw = await fs.readFile(statePath, 'utf8');
@@ -58,7 +159,7 @@ export async function loadQueueState(): Promise<QueueStateFile> {
     const initial: QueueStateFile = {
       generatedAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-      items: candidates.map((item) => ({ ...item, reviewStatus: 'inbox' })),
+      items: sortAndRenumber(candidates.map((item) => ({ ...item, reviewStatus: 'inbox' }))),
     };
     await saveQueueState(initial);
     return initial;
@@ -77,8 +178,29 @@ export async function moveQueueItem(id: string, reviewStatus: QueueStatus) {
       ? { ...item, reviewStatus, updatedAt: new Date().toISOString() }
       : item,
   );
-  const updated: QueueStateFile = { ...state, updatedAt: new Date().toISOString(), items: next };
+  const updated: QueueStateFile = {
+    ...state,
+    updatedAt: new Date().toISOString(),
+    items: sortAndRenumber(next),
+  };
   await saveQueueState(updated);
+}
+
+export async function refreshQueueFromArchive() {
+  const state = await loadQueueState();
+  const archiveItems = await readArchiveCandidates();
+  const existingIds = new Set(state.items.map((item) => String(item.id)));
+  const newItems = archiveItems
+    .filter((item) => !existingIds.has(String(item.id)))
+    .map((item) => ({ ...item, reviewStatus: 'inbox' as QueueStatus, importedAt: new Date().toISOString(), updatedAt: new Date().toISOString() }));
+
+  const updated: QueueStateFile = {
+    ...state,
+    updatedAt: new Date().toISOString(),
+    items: sortAndRenumber([...state.items, ...newItems]),
+  };
+  await saveQueueState(updated);
+  return { added: newItems.length, total: updated.items.length };
 }
 
 export function groupQueueItems(items: QueueItem[]) {

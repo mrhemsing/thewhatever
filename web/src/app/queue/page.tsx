@@ -1,5 +1,5 @@
 import { groupQueueItems, loadQueueState, type QueueItem, type QueueStatus } from '@/lib/xQueue';
-import { updateQueueItemStatus } from './actions';
+import { refreshQueue, updateQueueItemStatus } from './actions';
 
 function formatNotes(n: number) {
   return new Intl.NumberFormat('en-US').format(n);
@@ -61,9 +61,14 @@ export default async function QueuePage() {
         <div>
           <div className="queueEyebrow">@thewhatever</div>
           <h1>X review queue</h1>
-          <p className="queueSub">Now stateful: move posts between inbox, approved, posted, and rejected.</p>
+          <p className="queueSub">Stateful queue with refresh-from-archive support.</p>
         </div>
-        <div className="queueStat">{state.items.length} total items</div>
+        <div className="queueTopbarActions">
+          <div className="queueStat">{state.items.length} total items</div>
+          <form action={refreshQueue}>
+            <button className="queueButton" type="submit">Refresh from Tumblr archive</button>
+          </form>
+        </div>
       </div>
 
       <section className="queueColumnsGrid">

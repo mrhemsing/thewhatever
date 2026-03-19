@@ -1,7 +1,7 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { moveQueueItem, type QueueStatus } from '@/lib/xQueue';
+import { moveQueueItem, refreshQueueFromArchive, type QueueStatus } from '@/lib/xQueue';
 
 export async function updateQueueItemStatus(formData: FormData) {
   const id = String(formData.get('id') || '');
@@ -9,5 +9,10 @@ export async function updateQueueItemStatus(formData: FormData) {
   if (!id) return;
   if (!['inbox', 'approved', 'posted', 'rejected'].includes(status)) return;
   await moveQueueItem(id, status);
+  revalidatePath('/queue');
+}
+
+export async function refreshQueue() {
+  await refreshQueueFromArchive();
   revalidatePath('/queue');
 }
